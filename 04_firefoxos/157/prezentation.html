@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=1024, user-scalable=no">
+
+        <title>Firefox OS</title>
+
+        <link rel="stylesheet" media="screen" href="../../utils/deck.js/core/deck.core.css">
+        <link rel="stylesheet" media="screen" href="../../utils/deck.js/extensions/goto/deck.goto.css">
+        <link rel="stylesheet" media="screen" href="../../utils/deck.js/extensions/menu/deck.menu.css">
+        <link rel="stylesheet" media="screen" href="../../utils/deck.js/extensions/navigation/deck.navigation.css">
+        <link rel="stylesheet" media="screen" href="../../utils/deck.js/extensions/status/deck.status.css">
+        <link rel="stylesheet" media="screen" href="../../utils/deck.js/extensions/scale/deck.scale.css">
+        <link rel="stylesheet" media="screen" href="../../utils/deck.js/themes/style/neon.css">
+        <link rel="stylesheet" media="screen" href="../../utils/deck.js/themes/transition/fade.css">
+        <link rel="stylesheet" media="print" href="../../utils/deck.js/core/print.css">
+        <script src="../../utils/deck.js/modernizr.custom.js"></script>
+        <style>
+            ul{list-style-type:none;}
+            .big{
+                text-align: center;
+                font-size: 350%;
+            }
+            .newcode{
+                color:yellow;
+                font-size: xx-large;
+                font-weight: 900;
+            }
+
+            #drawer {
+                height: 100%;
+            }
+
+            div[role="main"] {
+                background: #fff;
+                height: 100%;
+            }
+
+            .frame{ 
+                display: block;
+                overflow: hidden;
+                position: relative;
+                margin: 0 auto;
+                height: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="deck-container">
+
+            <section class="slide">
+                <h1>
+                    <strong>Events</strong>
+                </h1>
+            </section>
+
+            <section class="slide">
+                <h2>What?</h2>
+                <pre>
+<code>
+                    Animation Battery  Call  CSS  Database  Document 
+                    DOM mutation Drag  Element Focus Form  
+                    Frame Input device  Media Menu Network Notification 
+                    Popup Printing Progress Resource Script Sensor 
+                    Session history Smartcard SMS and USSD Storage 
+                    SVG Tab Text Touch Update Value change View 
+                    Websocket Window Uncategorized 
+                    </code>
+                </pre>
+                <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events">https://developer.mozilla.org/en-US/docs/Web/Reference/Events</a></p>
+                <p><a target="_blank" href="https://developer.mozilla.org/en-US/Apps/Reference">https://developer.mozilla.org/en-US/Apps/Reference</a></p>
+                <p><a target="_blank" href="https://github.com/mozilla-b2g/gaia/tree/master/shared/style">Start creating your own apps</a></p>
+            </section>
+
+            <section class="slide">
+                <h2>How?</h2> 
+                <p>&lt;button onclick="..."></p>
+                <p>myButton.onclick = function(e){...};</p>
+                <p>myButton.addEventListener('click', function(e){...}, false);</p>
+            </section>
+
+            <section class="slide">
+                <h2>Event Object (parent)</h2>
+                <pre>
+                    <code>
+interface Event {
+  const unsigned short      CAPTURING_PHASE = 1;
+  const unsigned short      AT_TARGET = 2;
+  const unsigned short      BUBBLING_PHASE = 3;
+
+  readonly attribute DOMString        type;
+  readonly attribute EventTarget      target;
+  readonly attribute EventTarget      currentTarget;
+  readonly attribute unsigned short   eventPhase;
+  readonly attribute boolean          bubbles;
+  readonly attribute boolean          cancelable;
+  readonly attribute DOMTimeStamp     timeStamp;
+
+  void               stopPropagation();
+  void               preventDefault();
+  void               initEvent(in DOMString eventTypeArg, 
+                               in boolean canBubbleArg, 
+                               in boolean cancelableArg);
+};                        
+</code>
+                </pre>
+            </section>
+
+            <section class="slide">
+                <h2>Events object</h2>
+                <pre>
+                    <code>
+AnimationEvent  AudioProcessingEvent BeforeInputEvent 
+BeforeUnloadEvent BlobEvent ClipboardEvent 
+CloseEvent CompositionEvent CSSFontFaceLoadEvent 
+CustomEvent DeviceLightEvent DeviceMotionEvent
+DeviceOrientationEvent DeviceProximityEvent DOMTransactionEvent 
+DragEvent EditingBeforeInputEvent ErrorEvent
+FocusEvent GamepadEvent HashChangeEvent
+IDBVersionChangeEvent KeyboardEvent MediaStreamEvent
+MessageEvent MouseEvent MutationEvent
+OfflineAudioCompletionEvent PageTransitionEvent PointerEvent
+PopStateEvent ProgressEvent RelatedEvent
+RTCPeerConnectionIceEvent SensorEvent StorageEvent
+SVGEvent SVGZoomEvent TimeEvent
+TouchEvent TrackEvent TransitionEvent
+UIEvent UserProximityEvent WheelEvent
+                    </code>
+                </pre>    
+            </section>
+
+            <section class="slide">
+                <h2>In action</h2>
+                <pre>
+                    <code>
+&lt;input type="text" id="f">
+&lt;script>
+    document.getElementById("f").onchange=
+    function(e){...};
+&lt;/script>                        
+</code>
+                </pre>
+            </section>
+
+            <section class="slide">
+                <h2>Touch events</h2>
+                <pre>
+<code>
+function startup() {
+  var el = document.getElementsByTagName("canvas")[0];
+  el.addEventListener("touchstart", handleStart, false);
+  el.addEventListener("touchend", handleEnd, false);
+  el.addEventListener("touchcancel", handleCancel, false);
+  el.addEventListener("touchleave", handleEnd, false);
+  el.addEventListener("touchmove", handleMove, false);
+  log("initialized.");
+}
+</code>
+                </pre>
+
+                <pre>
+                    <code>
+function handleStart(evt) {
+    var touches = evt.changedTouches;
+     for (var i=0; i < touches.length; i++) {.....}
+}                        
+</code>
+                </pre>
+            </section>
+
+
+            <section class="slide">
+                <h2>TouchEvent object</h2>
+                <pre>
+                    <code>
+interface Touch {
+      readonly    attribute long        identifier;
+      readonly    attribute EventTarget target;
+      readonly    attribute long        screenX;
+      readonly    attribute long        screenY;
+      readonly    attribute long        clientX;
+      readonly    attribute long        clientY;
+      readonly    attribute long        pageX;
+      readonly    attribute long        pageY;
+  };                    </code>
+                </pre>
+            </section>
+
+            <section class="slide">
+                <h2>Create event </h2>
+                <pre>
+                    <code>
+var event = new Event('build');
+
+elem.addEventListener('build', function (e) { ... }, false);
+elem.dispatchEvent(event);
+                    </code>
+                </pre>
+
+                <pre><code>
+var event = new CustomEvent('build', { 'detail': elem.dataset.time });
+
+function eventHandler(e) {
+  log('The time is: ' + e.detail);
+}                    
+</code></pre>
+            </section>
+
+            <section class="slide">
+                <h2>Example</h2>
+                <h1>ToDo application</h1>
+            </section>
+
+            <section class="slide">
+                <h2>index.html - Toolbar navigation</h2>
+                <pre>
+                    <code>
+&lt;div role="toolbar">
+    &lt;button data-icon="add" >add &lt;/button>
+    &lt;button data-icon="info">list &lt;/button>
+    &lt;button data-icon="close">exit &lt;/button>
+&lt;/div> 
+                   </code>
+                </pre> 
+                
+                <pre>
+<code class="newcode">
+window.onload=function(){
+    document.querySelector("BUTTON [data-icon='add']").addEventListener("click",viewAddPage);
+    document.querySelector("BUTTON [data-icon='info']").addEventListener("click",viewMainPage);
+    document.querySelector("BUTTON [data-icon='close']").addEventListener("click",viewExitPage);
+};
+
+function viewMainPage(){window.location.href="index.html";}
+function viewAddPage(){window.location.href="add.html";}
+function viewExitPage(){window.location.href="exit.html";}                        
+</code>
+                </pre>
+            </section>
+            
+            
+            <section class="slide">
+                <h2>index.html - Toolbar navigation</h2>
+                <pre>
+                    <code>
+&lt;button <span class="newcode">id="cancel"</span>>Cancel&lt;/button>
+&lt;button <span class="newcode">id="exit"</span> class="danger">Exit&lt;/button>
+                   </code>
+                </pre> 
+                
+                <pre>
+<code class="newcode">
+window.onload=function(){
+    document.querySelector("#cancel").addEventListener("click",viewMainPage);
+    document.querySelector("#exit").addEventListener("click",exit);
+}
+
+function viewMainPage(){window.location.href="index.html";}
+function exit(){window.close();}
+</code>
+                </pre>
+            </section>            
+            
+            <section class="slide">
+                <h1>Thank you for your attention.</h1>
+            </section>
+
+            <!-- deck.navigation snippet -->
+            <div aria-role="navigation">
+                <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+                <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+            </div>
+
+            <!-- deck.status snippet -->
+            <p class="deck-status" aria-role="status">
+                <span class="deck-status-current"></span>
+                /
+                <span class="deck-status-total"></span>
+            </p>
+
+            <!-- deck.goto snippet -->
+            <form action="." method="get" class="goto-form">
+                <label for="goto-slide">Go to slide:</label>
+                <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+                <datalist id="goto-datalist"></datalist>
+                <input type="submit" value="Go">
+            </form>
+
+            <!-- End extension snippets. -->
+        </div>
+
+        <!-- Required JS files. -->
+        <script src="../../utils/deck.js/jquery.min.js"></script>
+        <script src="../../utils/deck.js/core/deck.core.js"></script>
+        <script src="../../utils/deck.js/extensions/menu/deck.menu.js"></script>
+        <script src="../../utils/deck.js/extensions/goto/deck.goto.js"></script>
+        <script src="../../utils/deck.js/extensions/status/deck.status.js"></script>
+        <script src="../../utils/deck.js/extensions/navigation/deck.navigation.js"></script>
+        <script src="../../utils/deck.js/extensions/scale/deck.scale.js"></script>
+
+        <!-- Initialize the deck. You can put this in an external file if desired. -->
+        <script>
+            $(function () {
+                $.deck('.slide');
+            });
+        </script>
+    </body>
+</html>

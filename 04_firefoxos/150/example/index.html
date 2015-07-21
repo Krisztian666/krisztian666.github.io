@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>TODO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/headers.css" rel="stylesheet" type="text/css">
+        <link href="styles/drawer.css" rel="stylesheet" type="text/css">
+        <link href="styles/app.css" rel="stylesheet" type="text/css">
+        <link href="styles/layout.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>
+            <section data-type="sidebar">
+                <header>
+                    <h1>Menu</h1>
+                </header>
+                <nav>
+                    <ul>
+                        <li><a href="add.html">Add</a></li>
+                        <li><a href="index.html">List</a></li>
+                        <li><a href="exit.html">Exit</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="drawer" role="region">
+                <header>
+                    <a href="#content"><span class="icon icon-menu">hide sidebar</span></a>
+                    <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+                    <h1>ToDo</h1>
+                </header>
+                <div role="main">
+                    <section class="gaia-list fit scroll sticky">
+                        <article>
+                            <header>Date-1</header>
+                            <ul>
+                                <li>ToDo-1</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <header>Date-2</header>
+                            <ul>
+                                <li>ToDo-2</li>
+                                <li>ToDo-3</li>
+                            </ul>
+                        </article>
+                    </section>
+                </div>
+            </section>
+    </body>
+</html>
