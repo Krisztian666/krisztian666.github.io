@@ -10,8 +10,8 @@
   	var log1 = document.getElementById('log1');
   	var log2 = document.getElementById('log2');
   	var log3 = document.getElementById('log3');
-	var worker0 = new Worker('http://krisztian666.github.io/webmaker/runningforever.js');
-    worker0.onmessage = function(e) {
+	var worker0 = new Worker('runningforever.js');
+        worker0.onmessage = function(e) {
       log0.innerhtml =e.data;
     }
 </script>
