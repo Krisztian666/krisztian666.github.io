@@ -1,0 +1,24 @@
+<style>
+  p{
+    background-color:red;
+    width:10;
+  }
+</style>
+
+<script>
+  	var log0 = document.getElementById('log0');
+  	var log1 = document.getElementById('log1');
+  	var log2 = document.getElementById('log2');
+  	var log3 = document.getElementById('log3');
+	var worker0 = new Worker('http://krisztian666.github.io/webmaker/runningforever.js');
+    worker0.onmessage = function(e) {
+      log0.innerhtml =e.data;
+    }
+</script>
+<body>
+  <p id="log0">1</p>
+  <p id="log1">2</p>
+  <p id="log2">3</p>
+  <p id="log3">4</p>
+</body>
+
