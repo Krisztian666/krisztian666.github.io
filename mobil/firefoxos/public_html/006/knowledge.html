@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Firefox OS Magyarul</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>        
+        <script>
+            $(function () {
+                $(".subaccordion").accordion({heightStyle: "content"});
+            });
+        </script>
+    </head>    
+    <body>
+        <div class="subaccordion">
+            <h3>Új ismeretek átadása</h3>
+            <div>
+                <p>
+A fejléc komponens az alkalmazáson belüli navigáció segítéséhez jelenít meg címkéiket,  vezérlő elemeket.
+A fejléc egy vízszintes sáv a képernyő teljes szélességében, amely a képernyő tetején jelenik meg a legtöbb alkalmazásban.
+Olyan speciális esetekben mint például a böngésző alkalmazás a fejlécek felett lebeghetnek, vagy akár rá is folyhatnak tartalmak.
+A cím szöveges tartalma mutatja meg az alkalmazáson belüli aktuális nézet nevét.
+A fejléc adott esetben tartalmazhat további szöveget, például egy e-mail alkalmazásban, az olvasatlan üzeneteket számát lehet így megjeleníteni.
+A fejléc komponensben helyet kaphatnak navigációs és tartalom módosító eseménykezelőket is.
+A teljes képernyős játékokat kivéve a legtöbb alkalmazásban kiemelt szerepe van a a fejlécnek.
+
+Az Headers használatához a heders.css CSS állományra lesz szükségünk. A fejléc elemeit egy szekcióban  kell elhelyeznünk.                 
+Az alklalmazáson belül megjelenő nézet nevét a H1 elemben tudjuk definiálni.
+A fejléchez kapcsolódó opcionális vezérlő gombokat jobb oldalon egy toolbar menuben linkként, 
+bal oldalon közvetlenü a header elemen belül gombt ként tudjuk megadni. 
+A navigációs gombjaink minden esetben a nézet megnevezését tartalmazó H1 tag előtt szerepeljenek a forrásunkban.
+Lehetőségünk van szinteket megkülönböztetni a fejléc komponensünkben, ehhez a szekción belül több header elemet használhatunk.
+                </p>
+            </div>
+            <h3>Releváns hivatkozások a témakörben</h3>
+            <div>
+                <ul>
+                    <li>http://buildingfirefoxos.com</li>
+                </ul>
+            </div>
+            <h3>Ellenörző teszt kérdések</h3>
+            <div>
+                <ul>
+                    <li> 
+                        <p>Melyik CSS álomány tartalmazza az Headers komponenst?</p>
+                        <ul>
+                            <li>( ) header.css </li>	
+                            <li>(x) headers.css </li>
+                            <li>( ) app_head.css</li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Milyen HTML elemek az Headers bal oldali gombjai</p>
+                        <ul>
+                            <li>(x) button </li>	
+                            <li>( ) link </li>
+                            <li>( ) form </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Melyik HTML elemre nem lesz szükségünk az Headers létrehoásához?</p>
+                        <ul>
+                            <li>( ) menu </li>	
+                            <li>(x) li </li>
+                            <li>( ) header </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Melyik HTML elem NEM opcionális az Headers komponensben?</p>
+                        <ul>
+                            <li>( ) menu </li>	
+                            <li>( ) button </li>
+                            <li>(x) header </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Egy kijelzőn egyszerre hány Header komponens használható?</p>
+                        <ul>
+                            <li>( ) csak egyet</li>	
+                            <li>( ) kettőt, lent és fent egyet-egyet</li>
+                            <li>(x) nincs meghatározva, de célszerű egyet.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
