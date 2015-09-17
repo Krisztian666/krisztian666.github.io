@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Firefox OS Magyarul</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>        
+        <script>
+            $(function () {
+                $(".subaccordion").accordion({heightStyle: "content"});
+            });
+        </script>
+    </head>    
+    <body>
+        <div class="subaccordion">
+            <h3>Új ismeretek átadása</h3>
+            <div>
+                <p>
+Az Action menü felületi komponens egy menüben mutatja az elérhető akciók listáját, amelyből a felhasználó választhat.
+Az Action Menü-t leggyakrabban az alkalmazások belsejében elérhető eszköztárak megjelenítésére használjuk.      
+Egy Action Menü legalább egy vagy akár több elemet is tartalmazhat.
+A Megjelenő menü automatikusan felveszi a kijelző méretét. Ha a magassága meghaladja a kijelző méretét akkor automatikusan görgethetővé válik.
+Ha lehet a görgethető változatot kerüljük el maradjunk egy cím és öt menüsornál. 
+A Cím szövegét nem kötelező megadni. A menü tartalmazzon egy akció gombot a bezárásra.
+Az Action Menü használatához a action_menu.css CSS állományra lesz szükségünk. A menüt elemeit egy form-ban  kell elhelyeznünk.                 
+A menühöz kapcsolódó opcionális fejlécet szövegét egy header elemben adhatjuk meg. 
+A menü gombjait egy menu elemen belül button elemekként tudjuk definiálni.
+                </p>
+            </div>
+            <h3>Releváns hivatkozások a témakörben</h3>
+            <div>
+                <ul>
+                    <li>http://buildingfirefoxos.com</li>
+                </ul>
+            </div>
+            <h3>Ellenörző teszt kérdések</h3>
+            <div>
+                <ul>
+                    <li> 
+                        <p>Melyik CSS álomány tartalmazza az Action Menu komponenst?</p>
+                        <ul>
+                            <li>( ) menu.css </li>	
+                            <li>( ) action.css </li>
+                            <li>(x) action_menu.css</li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Milyen HTML elemek az Action menu gombjai</p>
+                        <ul>
+                            <li>(x) button </li>	
+                            <li>( ) link </li>
+                            <li>( ) form </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Melyik HTML elemre nem lesz szükségünk az Acron menu létrehoásához?</p>
+                        <ul>
+                            <li>( ) menu </li>	
+                            <li>(x) li </li>
+                            <li>( ) header </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Melyik HTML elem opcionális az Action menu komponensben?</p>
+                        <ul>
+                            <li>( ) menu </li>	
+                            <li>( ) button </li>
+                            <li>(x) header </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Egy kijelzőn egyszerre hány Action menü komponens használható?</p>
+                        <ul>
+                            <li>(x) 1</li>	
+                            <li>( ) 2</li>
+                            <li>( ) nincs meghatározva, akár több száz.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
