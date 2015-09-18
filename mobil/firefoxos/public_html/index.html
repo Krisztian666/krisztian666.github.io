@@ -11,12 +11,17 @@
             $(function () {
                 $(".accordion").accordion({heightStyle: "content"});
                 $(".tabs").tabs({
-                    load: function( event, ui ) {$(".subaccordion").accordion({heightStyle: "content"});}
+                    load: function( event, ui ) {
+                        console.log("begin of tab load:"+$(".subaccordion").length);
+                        $(".subaccordion").accordion({heightStyle: "content"});
+                        console.log("end of tab load");
+                    }
                 });
             });
         </script>
     </head>
     <body>
+        <h1> A: Firefox OS - alapok</h1>
         <div class="accordion">
             <h3>A Fireofox OS platform és fejlesztői környezet</h3>
             <div>
@@ -68,13 +73,17 @@
                     </ul>
                 </div>
             </div>
+        </div>    
+        
+        <h1> B: Firefox OS - felhasználói felület kialakítása</h1>
+        <div class="accordion">
             <h3>Firefox OS UI: BuildingBlocks - headers</h3>
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b01/motivation.html">Motiváció</a></li>
+                        <li><a href="b01/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b01/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -82,9 +91,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b02/motivation.html">Motiváció</a></li>
+                        <li><a href="b02/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b02/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -92,9 +101,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b03/motivation.html">Motiváció</a></li>
+                        <li><a href="b03/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b03/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -102,9 +111,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b04/motivation.html">Motiváció</a></li>
+                        <li><a href="b04/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b04/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -112,9 +121,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="010/motivation.html">Motiváció</a></li>
-                        <li><a href="010/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="010/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b05/motivation.html">Motiváció</a></li>
+                        <li><a href="b05/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b05/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -122,9 +131,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b06/motivation.html">Motiváció</a></li>
+                        <li><a href="b06/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b06/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -132,9 +141,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b07/motivation.html">Motiváció</a></li>
+                        <li><a href="b07/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b07/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -142,9 +151,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b08/motivation.html">Motiváció</a></li>
+                        <li><a href="b08/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b08/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -152,9 +161,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b09/motivation.html">Motiváció</a></li>
+                        <li><a href="b09/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b09/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -162,9 +171,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b10/motivation.html">Motiváció</a></li>
+                        <li><a href="b10/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b10/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -172,9 +181,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b11/motivation.html">Motiváció</a></li>
+                        <li><a href="b11/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b11/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -182,9 +191,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b12/motivation.html">Motiváció</a></li>
+                        <li><a href="b12/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b12/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -192,9 +201,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b13/motivation.html">Motiváció</a></li>
+                        <li><a href="b13/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b13/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -202,9 +211,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b14/motivation.html">Motiváció</a></li>
+                        <li><a href="b14/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b14/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -212,9 +221,9 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b0/motivation.html">Motiváció</a></li>
+                        <li><a href="b0/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b0/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
@@ -222,12 +231,17 @@
             <div>
                 <div class="tabs">
                     <ul>
-                        <li><a href="0/motivation.html">Motiváció</a></li>
-                        <li><a href="0/knowledge.html">ismeret átadás</a></li>
-                        <li><a href="0/excercise.html">Gyakorlás</a></li>
+                        <li><a href="b0/motivation.html">Motiváció</a></li>
+                        <li><a href="b0/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b0/excercise.html">Gyakorlás</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+        <h1> B: Firefox OS - felhasználói felület kialakítása</h1>
+        <div class="accordion">
+            
+        </div>        
     </body>
 </html>
