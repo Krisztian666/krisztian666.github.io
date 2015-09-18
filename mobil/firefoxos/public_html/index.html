@@ -10,8 +10,9 @@
         <script>
             $(function () {
                 $(".accordion").accordion({heightStyle: "content"});
-                $(".tabs").tabs();
-                $(".subaccordion").accordion({heightStyle: "content"});
+                $(".tabs").tabs({
+                    load: function( event, ui ) {$(".subaccordion").accordion({heightStyle: "content"});}
+                });
             });
         </script>
     </head>
