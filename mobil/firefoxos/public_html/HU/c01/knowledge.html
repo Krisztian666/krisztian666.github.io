@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Firefox OS Magyarul</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>    
+    <body>
+        <div class="subaccordion">
+            <h3>Új ismeretek</h3>
+            <div>
+                <p>
+Alkalmazásunk Web Storage API segítségével lesz képes kulcs / érték párok tárolására. 
+Ez a megoldás sokkal intuitívabb mintha cookie-kat használnánk.
+
+A Web Storage API két tárolás mechanizmust támogat.
+Minden alkalmazás számára futás során elérhető egy elszeparált sessionStorage tároló, ez egy olyan ideiglenes tároló melybe az alkalmazásaink szabadon írhatnak adatokat. 
+A tárolt adatok mmegmaradnak az alkalmazás vagy oldalaik újratölrése után is
+A localStorage is ugyanazt csinálja, de az itt tárolt adatok akkor is megmaradnak, ha az alkalmazás lezárul és újra indul.
+
+A tárolókat a  Window.sessionStorage és Window.localStorage hívásokon keresztül érhetjük el. A tárolóban adatokat elhelyezni 
+setItem lekérdezni a getItem metódusokkal tudunk. 
+           
+                </p>
+            </div>
+            <h3>Releváns hivatkozások a témakörben</h3>
+            <div>
+                <ul>
+                    <li>https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage</li>
+                    <li>https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage</li>
+                    <li>https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage</li>
+                </ul>
+            </div>
+            <h3>Ellenörző teszt kérdések</h3>
+            <div>
+                <ul>
+                    <li> 
+                        <p>Melyik storage típusban lehet tartósan alkalmazás indítások között is adatokat tárolni?</p>
+                        <ul>
+                            <li>( ) session </li>	
+                            <li>( ) persist </li>
+                            <li>(x) local</li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Hány megabyte tárterületet használhatunk alkalmazásonként a localStorage-kéne?</p>
+                        <ul>
+                            <li>(x) 10 MB </li>	
+                            <li>( ) 50 MB </li>
+                            <li>( ) 100 MB </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Milyen típusú adatokat tárolhatunk a local- és sessionStorage tárolókban?</p>
+                        <ul>
+                            <li>(x) STRING </li>	
+                            <li>( ) OBJECT </li>
+                            <li>( ) JSON </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Hogyan érjük el a local- és sessionStorage tárolókban tárolt adatainkat?</p>
+                        <ul>
+                            <li>( ) véletlenszerűen </li>	
+                            <li>(x) hozzájuk kapcsolt kulccsal </li>
+                            <li>( ) tárolása után visszakapott UUID-val </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Egy alkalmazásban hány sessionStorage mezőt használhatunk?</p>
+                        <ul>
+                            <li>( ) 1024-et </li>	
+                            <li>( ) 100-at </li>
+                            <li>(x) unsigned long max </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
