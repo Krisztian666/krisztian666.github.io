@@ -10,29 +10,40 @@
             <h3>Új ismeretek</h3>
             <div>
 <p>
-Az <i>IndexedDB</i> <i>API</i> <i>IDBDatabase</i> interfésze biztosítja a kapcsolatot adatbázissal. 
-Szükség esetén az <i>IDBDatabase</i> hozza létre azt a tranzakciót amely segítségével lekérdezni, manipulálni, és törölni lehet adatokat a tárolóban
-Firefox OS környezetben ez az egyelen lehetőség az adatbézis kezelésre.
+The IDBDatabase interface of the IndexedDB API provides a connection to a database; you can use an IDBDatabase object to open a transaction on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
 </p>
 
-<p><i>IDBDatabase.close()</i> metódus azzonal végrahajt egy adatbázis lezárást</p>
-<p><i>IDBDatabase.createObjectStore</i> létrehoza a megadott új objektum tárolót vagy indexet.</p>
-<p><i>IDBDatabase.deleteObjectStore</i> törli a megadott objektum tárolót, és a rá hivatkozó összes indexet. </p>
-<p><i>IDBDatabase.transaction</i> létrehoz egy olyan tranzakciót, amely segítségével hozzáférünk a tárolóban lévő adatokhoz.</p>
-
-<p> <b>Eseménykezelők</b> </p>
-<p> <i>IDBDatabase.onabort </i> Akkor váltódik ki automatikusan, amikor kapcsolat az adatbázisal megszakad.</p>
-<p> <i>IDBDatabase.onerror </i> Akkor váltódik ki automatikusan, amikor az adatbázishoz való hozzáférés nem sikerül. </p>
-<p> <i>IDBDatabase.onversionchange </i> Akkor váltódik ki automatikusan az adatbázis megynitásakor, amikor például egy adatbázis struktúra változása miatt megváltozik az adatbázis verziószáma.</p>
+<p><b>Methods:</b></p>
+<p>
+IDBDatabase.close()
+    Returns immediately and closes the connection to a database in a separate thread.
+</p>
 
 <p>
-A IDBObjectStore interfész valósítja meg az IndexedDB API-ban az Objektumok tárolását egy adatbázisban. 
-Az objektumok tárolását rendezett kulcsokkal valósítja meg. Ez teszi lehetővé a gyors feltöltést, keresést, és lekérdezést.    
-</p>    
-    
+IDBDatabase.createObjectStore()
+    Creates and returns a new object store or index.
+</p>
 
+<p>
+IDBDatabase.deleteObjectStore()
+    Destroys the object store with the given name in the connected database, along with any indexes that reference it.
+</p>
+
+<p>
+IDBDatabase.transaction()
+    Immediately returns a transaction object (IDBTransaction) containing the IDBTransaction.objectStore method, which you can use to access your object store. Runs in a separate thread.     
+</p>
+
+<p> <b> Event handlers:</b></p>
+<p> <i> IDBDatabase.onabort </i> Fires when access of the database is aborted.</p>
+<p> <i> IDBDatabase.onerror </i> Fires when access to the database fails.</p>
+<p> <i> IDBDatabase.onversionchange </i> Fires when a database structure change (IDBOpenDBRequest.onupgradeneeded event or IDBFactory.deleteDatabase was requested elsewhere (most probably in another window/tab on the same computer). This is different from the version change transaction (see IDBVersionChangeEvent), but it is related.</p>
+
+<p>
+The IDBObjectStore interface of the IndexedDB API represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.    
+</p>
             </div>
-            <h3>API dokumentáció</h3>
+            <h3>API documentations</h3>
             <div>
                 <ul>
                     <li>https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase</li>
