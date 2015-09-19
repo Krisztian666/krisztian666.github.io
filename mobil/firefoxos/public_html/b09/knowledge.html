@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Firefox OS Magyarul</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>    
+    <body>
+        <div class="subaccordion">
+            <h3>Új ismeretek</h3>
+            <div>
+                <p>
+A Drawer komponens az alkalmazásoldalak felső szintű navigációjához biztosít egy fület vagy eszköz tárat.
+A megjelenő eszköztár elemi hozzáfének a felhasználók által generált tartalmakhoz az alkalmazás oldalán.
+Működésük hasonló a fülekhez böngészőben, csatolmányokhoz e-mailben, vagy üzenetküldő kliensekben a csevegésekhez, 
+esetleg több natár egyettes használatához.. 
+Az eszköztár a felhasználó kérésére kicsúszik a képernyő szélére, majd onnét tudja vissza tolni amikor már nincs rá szükség.
+A komponens használhat arra is, hogy alkalmazáson belül hozzáférést biztosítson a másodlagos vagy "power-user" funkcióknak .
+Az eszköztár alapértelmezésben becsukva jelenik meg. Ahoz hogy tartalma láthatóvá váljon a felhasználónak meg kell érinteni 
+a nyitó gombot. Ekkor egy csúszó animáció után válik láthatóvá a tartalma.
+A fiók zárva, amikor a felhasználó vagy csapok a "fiókban" gombot, vagy bárhol a látható terület a mögöttes elsődleges felület. 
+Ellentétes irányú húzásra visszaáll az elsődleges tartalom .
+Az eszköztár változó szélességű; azonban felhasználói felületeinket úgy kell kialakítani, hogy elég hely maradjon az eszköztár gombainak.
+        
+        
+A komponens használatához a drawer.css és header.css állományotat kell az alkalmazás oldalaink számára elérhetővé tenni.
+A felületi elemet két egymásba ágyazott szekció valósítja meg. A külső szekció tartalmazza egy NAV elemben felsorolva az elérhető funkció gombokat.
+A belső része egy Header komponens. Ebben található az a DIV amelyben az alkalmazás oldal adatait kell megvalósítani.
+                </p>
+            </div>
+            <h3>Releváns hivatkozások a témakörben</h3>
+            <div>
+                <ul>
+                    <li>http://buildingfirefoxos.com/building-blocks/layout.html</li>
+                    <li>https://developer.mozilla.org/en-US/Apps/Design/Firefox_OS_building_blocks</li>
+                    <li>https://github.com/mozilla-b2g/gaia/tree/master/shared/style</li>
+                    <li>https://www.mozilla.org/en-US/styleguide/products/firefox-os/</li>
+                    <li>https://hacks.mozilla.org/2013/02/firefox-os-building-blocks-to-the-rescue/</li>
+                    <li>https://wiki.mozilla.org/Gaia/Design/BuildingBlocks</li>
+                </ul>
+            </div>
+            <h3>Ellenörző teszt kérdések</h3>
+            <div>
+                <ul>
+                    <li> 
+                        <p>Melyik CSS álomány tartalmazza a Drawe komponenst?</p>
+                        <ul>
+                            <li>( ) conf.css </li>	
+                            <li>( ) confirm.css </li>
+                            <li>(x) drawer.css</li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Milyen HTML elem tartalmazza a funkciógombokat egy Drawer elemben?</p>
+                        <ul>
+                            <li>(x) NAV </li>	
+                            <li>( ) SECTION </li>
+                            <li>( ) FORM </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Melyik HTML elemre NEM lesz szükségünk egy CONFIRM létrehoásához?</p>
+                        <ul>
+                            <li>( ) NAV </li>	
+                            <li>(x) SPAN </li>
+                            <li>( ) SECTION </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Melyik HTML elem jelenít meg fejlécet a DRAWER komponensben?</p>
+                        <ul>
+                            <li>(x) SECTION </li>	
+                            <li>( ) HEADER </li>
+                            <li>( ) H1 </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Mely elem tartalmazza a DRAWER komponens szabadon használható paneljét?</p>
+                        <ul>
+                            <li>( ) ARTICLE</li>	
+                            <li>( ) SECTION</li>
+                            <li>(x) DIV</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

@@ -10,23 +10,21 @@
             <h3>Új ismeretek</h3>
             <div>
                 <p>
-A Lista komponens használatával képesek leszünk egymást követő adatokat sorokban megjeleníteni alkalmazásainkban.
-Ilyen adatsor lehet például a a nevek listáját, vagy az üzenetek listája
-A listában az elemek magassága változhat, megkülönbeztetünk egy, kettő vagy három soros elem magasságokat.
-A lista elemei lehetnek olyan egyszerű szövegek, de taralmazhatnak képeket és gombokat is.
-A listákban lehetőségünk van opcionális szakaszfejlécek elhelyezésére.
-         
-A Lista komponens használatához az lists.css állományt kell elérhetővé tenni az alkalmazás oldalaink számára.
-Minden egyes listát egy-egy szekcióba kell foglalnunk. A listán belüli sorokat az LI elemekkel alakíthatjuk ki.
-A lista elemiben szöveges sorokat P, az ikonokat ASIDE elemmel hozhatunk létre. 
-Az A elemmelbe ágyazva képesek leszün akár egy-egy részelemet is kattinthatóvá tenni.  
-Opcionális fejléceket a HEADER elemmel hozhatunk létre.
+A Layout egy olyan komponens mely alkalmazásának segítségével a leggyakoribb teljes oldal elrendezési struktúrákat 
+leszünk képesek egyszerűen létrehozni. Sok Firefox OS alkalmazás fix fejléc és lábléc közötti görgethető tartalommal 
+rendelkezik. Ilyen oldalakat tudunk madj mi is létrehozni ezzel a komponenssel.
+
+Layout alapú oldalak alkalmazásához a layout.css állományt kell elérhetővé tenni az alkalmazásaink oldalán.
+Ez a fajta oldalelrendezés két egymásba ágyazott szekcióból áll. A külső vbox fit css oszályú szekció tartalmazza a fix fejlécet 
+ésláblécet. A belső gaia-list fit scroll sticky css osztályú szekció valósítja meg a görgethető tartalmat. 
+A belső görgethető részen ARTICLE ágyazott listákban található az alkalmazás oldal tartalma. Az egyes ARTICLE elemekben 
+opcionális HEADER elemekkel tudunk címsorokat definiálni.  
                 </p>
             </div>
             <h3>Releváns hivatkozások a témakörben</h3>
             <div>
                 <ul>
-                    <li>http://buildingfirefoxos.com/building-blocks/lists.html</li>
+                    <li>http://buildingfirefoxos.com/building-blocks/layout.html</li>
                     <li>https://developer.mozilla.org/en-US/Apps/Design/Firefox_OS_building_blocks</li>
                     <li>https://github.com/mozilla-b2g/gaia/tree/master/shared/style</li>
                     <li>https://www.mozilla.org/en-US/styleguide/products/firefox-os/</li>
@@ -38,31 +36,31 @@ Opcionális fejléceket a HEADER elemmel hozhatunk létre.
             <div>
                 <ul>
                     <li> 
-                        <p>Melyik CSS álomány tartalmazza a Lists komponenst?</p>
+                        <p>Melyik CSS álomány tartalmazza a Layout komponenst?</p>
                         <ul>
                             <li>( ) list.css </li>	
-                            <li>( ) sections.css </li>
-                            <li>(x) lists.css</li>
+                            <li>( ) componets.css </li>
+                            <li>(x) layout.css</li>
                         </ul>
                     </li>
                     <li> 
-                        <p>Milyen HTML elemek a Lista komponens elemeinek szöveges része?</p>
+                        <p>Milyen HTML elemek a Layout komponens görgethető listájának opcionális fejléce?</p>
                         <ul>
-                            <li>(x) P </li>	
+                            <li>(x) HEADER </li>	
                             <li>( ) SECTION </li>
-                            <li>( ) ASIDE </li>
+                            <li>( ) ARTICLE </li>
                         </ul>
                     </li>
                     <li> 
-                        <p>Melyik HTML elemre NEM lesz szükségünk egy lista létrehoásához?</p>
+                        <p>Melyik HTML elemre NEM lesz szükségünk egy LAYOUT létrehoásához?</p>
                         <ul>
-                            <li>( ) LI </li>	
+                            <li>( ) ARTICLE </li>	
                             <li>(x) DIV </li>
                             <li>( ) SECTION </li>
                         </ul>
                     </li>
                     <li> 
-                        <p>Melyik HTML elem opcionális a Lista komponensben?</p>
+                        <p>Melyik HTML elem opcionális a LAYOUT komponensben?</p>
                         <ul>
                             <li>( ) SECTION </li>	
                             <li>( ) UL </li>
@@ -70,11 +68,11 @@ Opcionális fejléceket a HEADER elemmel hozhatunk létre.
                         </ul>
                     </li>
                     <li> 
-                        <p>Mely elemekkel tudunk egy listát szakaszokra bontani?</p>
+                        <p>Mely elemekkel tudunk egy Layout görgethető tartalmát szakaszokra bontani?</p>
                         <ul>
-                            <li>(x) HEADER elemekkel</li>	
-                            <li>( ) enterekkel</li>
-                            <li>( ) UL elemekkel</li>
+                            <li>(x) ARTICLE</li>	
+                            <li>( ) SECTION</li>
+                            <li>( ) MENU</li>
                         </ul>
                     </li>
                 </ul>
