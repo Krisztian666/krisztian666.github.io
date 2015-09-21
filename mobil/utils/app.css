@@ -1,0 +1,23 @@
+.deck-slide-scaler{  height: 650px;}
+audio{margin-left:100px;}
+pre {
+  height: 100%;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  resize: vertical;
+  overflow: auto;
+background-color :#000 !important;
+border: 0px !important;
+}
+
+pre code {
+  padding: 20px;
+  resize: vertical;
+  overflow: auto;
+background-color :#000 !important;
+border: 1px solid #fff;
+}
+

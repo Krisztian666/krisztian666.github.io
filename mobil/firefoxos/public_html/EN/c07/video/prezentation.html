@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=1024, user-scalable=no">
+
+        <title>Firefox OS platform</title>
+
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/core/deck.core.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/extensions/goto/deck.goto.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/extensions/menu/deck.menu.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/extensions/navigation/deck.navigation.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/extensions/status/deck.status.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/themes/style/neon.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/themes/transition/fade.css">
+        <link rel="stylesheet" media="print" href="../../../../../utils/deck.js/core/print.css">
+        <script src="../../../../../utils/deck.js/modernizr.custom.js"></script>
+        <link rel="stylesheet" media="screen" href="../../../../../utils/app.css">
+    </head>
+    <body>
+        <div class="deck-container">
+
+            <!-- Begin slides. Just make elements with a class of slide. -->
+
+            <section class="slide">
+                <audio src="1.mp3" controls=""></audio>
+                <h2>Adding a contact</h2>
+                <pre>
+                    <code>
+// first way: setting the properties directly
+var person = new mozContact();
+person.givenName  = ["John"];
+person.familyName = ["Doe"];
+person.nickname   = ["No kidding"];
+
+// second way: using a value object
+var contactData = {
+  givenName: ["John"],
+  familyName: ["Doe"],
+  nickname: ["No kidding"]
+};
+
+var person = new mozContact(contactData); // Firefox OS 1.3 takes a parameter to initialize the object
+if ("init" in person) {
+  person.init(contactData);
+}
+
+// save the new contact
+var saving = navigator.mozContacts.save(person);
+
+saving.onsuccess = function() {
+  console.log('new contact saved');
+};
+
+saving.onerror = function(err) {
+  console.error(err);
+};
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/API/Contacts_API</cite></p>
+            </section>
+            
+            <section class="slide">
+                <audio src="2.mp3" controls=""></audio>
+                <h2>Finding a contact</h2>
+                <pre>
+                    <code>
+var options = {
+  filterValue : "John",
+  filterBy    : ["givenName","name","nickName"],
+  filterOp    : "contains",
+  filterLimit : 1,
+  sortBy      : "familyName",
+  sortOrder   : "ascending"
+}
+
+var search = navigator.mozContacts.find(options);
+
+search.onsuccess = function() {
+  if (search.result.length === 1) {
+    var person = search.result[0];
+    console.log("Found:" + person.givenName[0] + " " + person.familyName[0]);
+  } else {
+    console.log("Sorry, there is no such contact.")
+  }
+};
+
+search.onerror = function() {
+  console.warn("Uh! Something goes wrong, no result found!");
+};
+
+var allContacts = navigator.mozContacts.getAll({sortBy: "familyName", sortOrder: "descending"});
+
+allContacts.onsuccess = function(event) {
+  var cursor = event.target;
+  if (cursor.result) {
+    console.log("Found: " + cursor.result.givenName[0] + " " + cursor.result.familyName[0]);
+    cursor.continue();
+  } else {
+    console.log("No more contacts");
+  }
+};
+
+allContacts.onerror = function() {
+  console.warn("Something went terribly wrong! :(");
+};
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/API/Contacts_API</cite></p>
+            </section>
+
+            <section class="slide">
+                <audio src="3.mp3" controls=""></audio>
+                <h2>Updating a contact</h2>
+                <pre>
+                    <code>
+ContactManager.find()
+ContactManager.getAll() 
+ContactManager.save()
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/API/Contacts_API</cite></p>
+            </section>
+
+            <section class="slide">
+                <audio src="4.mp3" controls=""></audio>
+                <h2>Deleting a contact</h2>
+                <pre>
+                    <code>
+ContactManager.remove()
+ContactManager.clear()
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/API/Contacts_API</cite></p>
+            </section>
+    
+
+            <!-- deck.navigation snippet -->
+
+            <!-- deck.status snippet -->
+            <p class="deck-status" aria-role="status">
+                <span class="deck-status-current"></span>
+                /
+                <span class="deck-status-total"></span>
+            <div>
+                <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+                <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+            </div>
+
+            </p>
+
+            <!-- deck.goto snippet -->
+            <form action="." method="get" class="goto-form">
+                <label for="goto-slide">Go to slide:</label>
+                <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+                <datalist id="goto-datalist"></datalist>
+                <input type="submit" value="Go">
+            </form>
+
+            <!-- End extension snippets. -->
+        </div>
+        <script src="../../../../../utils/deck.js/jquery.min.js"></script>
+        <script src="../../../../../utils/deck.js/core/deck.core.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/menu/deck.menu.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/goto/deck.goto.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/status/deck.status.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/navigation/deck.navigation.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/scale/deck.scale.js"></script>
+
+        <!-- Initialize the deck. You can put this in an external file if desired. -->
+        <script>
+            $(function () {
+                $.deck('.slide');
+            });
+        </script>
+    </body>
+</html>

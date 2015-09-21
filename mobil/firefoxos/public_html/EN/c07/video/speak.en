@@ -1,0 +1,62 @@
+https://developer.mozilla.org/en-US/docs/Web/API/Contacts_API
+
+
+The Contacts API provides a simple interface to manage a user's contacts stored in the system's address book. A typical use case for the Contacts API is the implementation of an application to manage an address book.
+------------------------------
+
+Adding a contact
+
+Creating a new entry in the system's address book is done in two steps:
+
+    Instantiate a new mozContact object and fill in all necessary properties. The mozContact interface defines all possible properties for a given contact. Those properties are mostly the same as the ones defined in the vCard 4.0 specification, with the following exceptions:
+        The vCard N attribute is split into five properties: familyName, givenName, additionalName, honorificPrefix, honorificSuffix
+        The vCard FN attribute has been renamed name
+        The vCard GENDER attribute is split into two properties: sex, genderIdentity
+        Be careful: most properties are arrays. Firefox v1.3 is much more strict in ensuring this and therefore some working code in Firefox v1.2 can stop working in Firefox v1.3 because of this.
+    Use the ContactManager.save() method with the contact object as its first parameter. The method returns a DOMRequest to keep track of the save operation's success or error.
+
+----------------------------
+
+Finding a contact
+
+There are two methods to retrieve a contact from the system's address book:
+
+    ContactManager.find() to retrieve a specific list of contacts
+    ContactManager.getAll() to retrieve all the contacts
+
+Both methods expect a parameter which is an object that defines the filter and sort options. ContactManager.getAll only accepts the sort options. Those options are:
+
+    sortBy: A string representing the field by which the results of the search are sorted. Currently only givenName and familyName are supported.
+    sortOrder: A string indicating the result's sort order. Possible values are descending or ascending.
+
+And the filter options:
+
+    filterBy: An array of strings representing all the fields to filter by.
+    filterValue: The value to match against.
+    filterOp: The filter comparison operator to use. Possible values are equals, startsWith, and match, the latter being specific to telephone numbers.
+    filterLimit: The number of contacts to retrieve for the find method.
+
+find returns a DOMRequest object and getAll returns a DOMCursor object to access the success or error of a search.
+
+If the search is successful, the result of the search is available in the DOMRequest.result property as either an Array of mozContact objects for find, or a single mozContact object for getAll. To receive the next result in the list with getAll, call the cursor's continue() method.
+
+----------------------------
+
+Updating a contact
+
+When retrieving a contact through find() or getAll() (or after a successful call to save() for a new contact), this contact has some metadata attached to it:
+
+    A unique ID available via mozContact.id
+    A Date object within mozContact.updated representing the last time the contact was updated.
+
+Updating the contact is just about changing its properties values, then saving it through a call to the save() method.
+
+----------------------------
+
+Deleting a contact
+
+A call to the ContactManager.remove() method will simply delete the mozContact object that was passed in.
+
+In some edge cases, it's also possible to get rid of all contacts. To do this, use ContactManager.clear(). Be careful when calling that method; there is no way back.
+-----------------------------
+

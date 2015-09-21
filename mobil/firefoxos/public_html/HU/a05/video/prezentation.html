@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=1024, user-scalable=no">
+
+        <title>Firefox OS platform</title>
+
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/core/deck.core.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/extensions/goto/deck.goto.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/extensions/menu/deck.menu.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/extensions/navigation/deck.navigation.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/extensions/status/deck.status.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/themes/style/neon.css">
+        <link rel="stylesheet" media="screen" href="../../../../../utils/deck.js/themes/transition/fade.css">
+        <link rel="stylesheet" media="print" href="../../../../../utils/deck.js/core/print.css">
+        <script src="../../../../../utils/deck.js/modernizr.custom.js"></script>
+        <link rel="stylesheet" media="screen" href="../../../../../utils/app.css">
+    </head>
+    <body>
+        <div class="deck-container">
+
+            <!-- Begin slides. Just make elements with a class of slide. -->
+
+            <section class="slide">
+                <audio src="js1.mp3" controls="" ></audio>
+                <pre>
+                    <code>
+objectName.propertyName
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</cite></p>
+            </section>
+
+            <section class="slide">
+                <audio src="js2.mp3" controls=""></audio>
+                <pre>
+                    <code>
+var myCar = new Object();
+myCar.make = "Ford";
+myCar.model = "Mustang";
+myCar.year = 1969;
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</cite></p>
+            </section>
+            
+            <section class="slide">
+                <audio src="js3.mp3" controls=""></audio>
+                <pre>
+                    <code>
+myCar["make"] = "Ford";
+myCar["model"] = "Mustang";
+myCar["year"] = 1969;
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</cite></p>
+            </section>
+
+            <section class="slide">
+                <audio src="js4.mp3" controls=""></audio>
+                <pre>
+                    <code>
+var myObj = new Object(),
+    str = "myString",
+    rand = Math.random(),
+    obj = new Object();
+
+myObj.type              = "Dot syntax";
+myObj["date created"]   = "String with space";
+myObj[str]              = "String value";
+myObj[rand]             = "Random Number";
+myObj[obj]              = "Object";
+myObj[""]               = "Even an empty string";
+
+console.log(myObj);
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</cite></p>
+            </section>
+
+            <section class="slide">
+                <audio src="js5.mp3" controls=""></audio>
+                <pre>
+                    <code>
+var propertyName = "make";
+myCar[propertyName] = "Ford";
+
+propertyName = "model";
+myCar[propertyName] = "Mustang";
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</cite></p>
+            </section>
+           
+            <section class="slide">
+                <audio src="js6.mp3" controls=""></audio>
+                <pre>
+                    <code>
+function showProps(obj, objName) {
+  var result = "";
+  for (var i in obj) {
+    if (obj.hasOwnProperty(i)) {
+        result += objName + "." + i + " = " + obj[i] + "\n";
+    }
+  }
+  return result;
+}
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</cite></p>
+            </section>
+
+            <section class="slide">
+                <audio src="js7.mp3" controls=""></audio>
+                <pre>
+                    <code>
+myCar.make = Ford
+myCar.model = Mustang
+myCar.year = 1969
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</cite></p>
+            </section>
+                    
+            <section class="slide">
+                <audio src="js8.mp3" controls=""></audio>
+                <pre>
+                    <code>
+var obj = { 
+property_1:   value_1,   // property_# may be an identifier...
+2:            value_2,   // or a number...
+// ...,
+"property n": value_n // or a string
+}; 
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</cite></p>
+            </section>
+
+            <section class="slide">
+                <audio src="js9.mp3" controls=""></audio>
+                <pre>
+                    <code>
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+                    </code>
+                </pre>
+                <p><cite>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</cite></p>
+            </section>
+            
+
+            <!-- deck.navigation snippet -->
+
+            <!-- deck.status snippet -->
+            <p class="deck-status" aria-role="status">
+                <span class="deck-status-current"></span>
+                /
+                <span class="deck-status-total"></span>
+            <div>
+                <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+                <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+            </div>
+
+            </p>
+
+            <!-- deck.goto snippet -->
+            <form action="." method="get" class="goto-form">
+                <label for="goto-slide">Go to slide:</label>
+                <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+                <datalist id="goto-datalist"></datalist>
+                <input type="submit" value="Go">
+            </form>
+
+            <!-- End extension snippets. -->
+        </div>
+        <script src="../../../../../utils/deck.js/jquery.min.js"></script>
+        <script src="../../../../../utils/deck.js/core/deck.core.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/menu/deck.menu.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/goto/deck.goto.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/status/deck.status.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/navigation/deck.navigation.js"></script>
+        <script src="../../../../../utils/deck.js/extensions/scale/deck.scale.js"></script>
+
+        <!-- Initialize the deck. You can put this in an external file if desired. -->
+        <script>
+            $(function () {
+                $.deck('.slide');
+            });
+        </script>
+    </body>
+</html>
