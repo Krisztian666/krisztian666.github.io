@@ -13,7 +13,7 @@
                 $(".tabs").tabs({
                     load: function( event, ui ) {
                         $(".subaccordion").accordion({heightStyle: "content"});
-                        $(".modal").dialog({modal: true});
+                        $(".modal").dialog({autoOpen: false,modal: true});
                     }
                 });
             }); 
