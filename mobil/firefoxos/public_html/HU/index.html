@@ -12,9 +12,8 @@
                 $(".accordion").accordion({heightStyle: "content"});
                 $(".tabs").tabs({
                     load: function( event, ui ) {
-                        console.log("begin of tab load:"+$(".subaccordion").length);
                         $(".subaccordion").accordion({heightStyle: "content"});
-                        console.log("end of tab load");
+                        $(".modal").dialog({modal: true});
                     }
                 });
             }); 
