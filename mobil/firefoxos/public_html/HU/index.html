@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>        
         <script>
+            function viewModalVideo(pID){
+                $("#"+pID).dialog({modal: true,width:'100%',height:'auto'});
+                $("#"+pID+" video").play();
+            } 
             $(function () {
                 $(".accordion").accordion({heightStyle: "content"});
                 $(".tabs").tabs({
