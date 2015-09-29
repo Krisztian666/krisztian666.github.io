@@ -4,30 +4,16 @@
         <title>Firefox OS Magyarul</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            function play(){
-    $( "#dialog-confirm" ).dialog({
-      resizable: false,
-      height:140,
 
-      modal: true,
-        open: function( event, ui ) {$(this video).play();},
-      buttons: {
-        Cancel: function() {
-          $( this ).dialog( "close" );
-        }
-      }
-    });            }
-        </script>
     </head>    
     <body>
-        <div id="dialog-confirm" title="video lejátszás?" style="display:none">
-            <video src="vokoscreen-2015-09-22_20-40-03.mkv" controls="" id="videob06"></video>
+<div class="modal" id="modal_b03" style='display:none'>
+            <video src="https://www.dropbox.com/s/bvu2vm0x8lj7mve/video.avi?dl=0" controls="" width="800" autoplay=""></video>
         </div>
         <div class="subaccordion">
             <h3>Új ismeretek</h3>
             <div>
-                <p><a href="" onclick="return play();"> <img src=/icons/play.png" > </a></p>
+                <button onclick="viewModalVideo('modal_b03');"> VIDEO</button>
                 <p>
                 A mobil kijelzőn elhelyezett gombokat megérintve a felhasználók az alkalmazásainkben kölönböző műveleteket 
                 képesek végrehajtani. Firefox OS környezetben több gombstílus is elérhető a fejlesztők számára.
