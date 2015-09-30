@@ -18,13 +18,20 @@ and open the template in the editor.
     list-style-type: decimal;
     width: 100%;
     display: block;
-    float: left:                 
+    float: left;                 
+    border-bottom: 1px solid #0000aa;
+    margin: 10px 0;
+             }
+             pre{
+                 font-size: xx-large;
              }
         </style>
         <script>
+            
             var edContent={
                 title:"Building Blocks - Headers ",
                 desc:"...........................",
+                imagePath:"http://krisztian666.github.io/mobil/firefoxos/public_html/HU/b01/animations/",
                 files:[
                     {id:"manifest",title:"manifest.webapp"},
                     {id:"index_html",title:"index.html"},
@@ -33,7 +40,7 @@ and open the template in the editor.
                 playing:[
                     {
                         hint:"Use CSS",
-                        image:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS_U9HSdrLq8VTXigwo0K25tPth5p5l9SeVxqO4Lt93UzdcdEd-Ng",
+                        image:"0.png",
                         source:{
                             container: "app_js",
                             values:[
@@ -44,7 +51,7 @@ and open the template in the editor.
 
                     {
                         hint:"Create header area",
-                        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3Z0pTb14ussAhNjEWV9KV28kG18Dt7Zc8mcAVT3acBNtI_Pi",
+                        image:"1.png",
                         source:{
                             container: "app_js",
                             values:[
@@ -58,35 +65,35 @@ and open the template in the editor.
 
                     {
                         hint:"set title",
-                        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3Z0pTb14ussAhNjEWV9KV28kG18Dt7Zc8mcAVT3acBNtI_Pi",
+                        image:"2.png",
                         source:{
                             container: "app_js",
                             values:[
-                                {position:4, content:'   <h1>ToDo</h1>'}
+                                {position:3, content:'   <h1>ToDo</h1>'}
                             ]
                         }
                     },
 
                     {
                         hint:"create close button",
-                        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3Z0pTb14ussAhNjEWV9KV28kG18Dt7Zc8mcAVT3acBNtI_Pi",
+                        image:"3.png",
                         source:{
                             container: "app_js",
                             values:[
-                                {position:4, content:'   <button><span class="icon icon-close">close</span></button>'}
+                                {position:3, content:'   <button><span class="icon icon-close">close</span></button>'}
                             ]
                         }                    
                     },
 
                     {
                         hint:"create add button",
-                        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3Z0pTb14ussAhNjEWV9KV28kG18Dt7Zc8mcAVT3acBNtI_Pi",
+                        image:"4.png",
                         source:{
                             container: "app_js",
                             values:[
-                                {position:5, content:'   <menu type="toolbar">'},
-                                {position:6, content:'   </menu>'},
-                                {position:6, content:'      <a href="#"><span class="icon icon-add">add</span></a>'}
+                                {position:4, content:'   <menu type="toolbar">'},
+                                {position:5, content:'   </menu>'},
+                                {position:5, content:'      <a href="#"><span class="icon icon-add">add</span></a>'}
                             ]
                         }                    
                     }                    
@@ -160,9 +167,13 @@ and open the template in the editor.
                     setTimeout(function () { showText(pCont, pozition, index, interval,pIDX); }, interval);
                 }
                 else if(pIDX<(pCont.values.length-1)) {
-                    writeCode(pCont,++pIDX);
+                    lineIndex++;
+                    setTimeout(writeCode,3000);
                 }
-                else if(playingIndex<edContent.playing.length) playContent(++playingIndex);
+                else if(playingIndex<edContent.playing.length) {
+                    playingIndex++;
+                    setTimeout(playContent,3000);
+                }
                 
             }
             
@@ -181,30 +192,33 @@ and open the template in the editor.
             }
 
 
-            function writeCode(dataSource,pAct){
-                console.log("writeCode:"+pAct);
+            function writeCode(){
+                console.log("writeCode:"+lineIndex);
                 $("#sources").tabs("option","active",$("#"+dataSource["container"]).attr("number"));
-                if(dataSource.values[pAct]["position"]==null)
-                    newText(dataSource,pAct);
+                if(dataSource.values[lineIndex]["position"]==null)
+                    newText(dataSource,lineIndex);
                 else 
-                    addText(dataSource,pAct);
+                    addText(dataSource,lineIndex);
             }
             
-            function playContent(x){
-                var dataSource;
-                dataSource=edContent.playing[x]["source"];
-                if(edContent.playing[x].image!=null)
-                    $("#screen img").attr("src",edContent.playing[x].image);
+            function playContent(){
+                dataSource=edContent.playing[playingIndex]["source"];
+                if(edContent.playing[playingIndex].image!=null)
+                    $("#screen img").attr("src",edContent.imagePath+edContent.playing[playingIndex].image);
                 
-                if(edContent.playing[x].hint!=null){
-                    $("#screen h3").html(edContent.playing[x].hint);
-                    $("#screen audio").attr("src","http://5.249.155.46:8080/SoundServer-1.0/sound?text="+edContent.playing[x].hint);
-                    document.querySelector("#screen audio").play();
+                if(edContent.playing[playingIndex].hint!=null){
+                    $("#screen h3").html(edContent.playing[playingIndex].hint);
+                    $("#screen audio").attr("src","http://5.249.155.46:8080/SoundServer-1.0/sound?text="+edContent.playing[playingIndex].hint+".");
+                  // document.querySelector("#screen audio").play();
                 }
-                writeCode(dataSource,0);
+                lineIndex=0;
+                writeCode(dataSource);
             }
+
+            var dataSource;
+            var lineIndex=0
             var playingIndex=0;
-            playContent(playingIndex);
+            playContent();
         </script>
     </body>
 </html>
