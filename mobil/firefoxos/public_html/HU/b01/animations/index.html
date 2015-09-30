@@ -39,10 +39,35 @@ and open the template in the editor.
                 ],
                 playing:[
                     {
+                        hint:"Create app description file",
+                        image:"fxosphone.png",
+                        source:{
+                            container: "manifest",
+                            values:[
+                                {content:'{'},
+                                {content:'   "version": "0.01",'},
+                                {content:'   "name": "ToDo",'},
+                                {content:'   "description": "ToDo",'},
+                                {content:'   "launch_path": "/index.html",'},
+                                {content:'   "fullscreen": "true",'},
+                                {content:'   "icons": {'},
+                                {content:'      "64": "/app64.png",'},
+                                {content:'      "128": "/app128.png",'},
+                                {content:'    },'},
+                                {content:'    "developer": {,'},
+                                {content:'       "name": "......",'},
+                                {content:'       "url": "....",'},
+                                {content:'    }'},
+                                {content:'    "default_locale": "en"'},
+                                {content:'}'}
+                            ]
+                        }
+                    },                    
+                    {
                         hint:"Use CSS",
                         image:"0.png",
                         source:{
-                            container: "app_js",
+                            container: "index_html",
                             values:[
                                 {content:'<link href="styles/headers.css" rel="stylesheet" type="text/css"/>'},
                             ]
@@ -53,7 +78,7 @@ and open the template in the editor.
                         hint:"Create header area",
                         image:"1.png",
                         source:{
-                            container: "app_js",
+                            container: "index_html",
                             values:[
                                 {content:'<section role="region">'},
                                 {content:'</section>'},
@@ -67,7 +92,7 @@ and open the template in the editor.
                         hint:"set title",
                         image:"2.png",
                         source:{
-                            container: "app_js",
+                            container: "index_html",
                             values:[
                                 {position:3, content:'   <h1>ToDo</h1>'}
                             ]
@@ -78,7 +103,7 @@ and open the template in the editor.
                         hint:"create close button",
                         image:"3.png",
                         source:{
-                            container: "app_js",
+                            container: "index_html",
                             values:[
                                 {position:3, content:'   <button><span class="icon icon-close">close</span></button>'}
                             ]
@@ -89,7 +114,7 @@ and open the template in the editor.
                         hint:"create add button",
                         image:"4.png",
                         source:{
-                            container: "app_js",
+                            container: "index_html",
                             values:[
                                 {position:4, content:'   <menu type="toolbar">'},
                                 {position:5, content:'   </menu>'},
@@ -107,7 +132,9 @@ and open the template in the editor.
         <span></span>
         </div>
         <br><br>
-            <div id="sources" style="width:60%; display:block; float:left">
+        <div id="radio" style="width: 100%;display: block;float:left;"></div>
+
+        <div id="sources" style="width:60%; display:block; float:left">
                 <ul>
                 </ul>
             </div>
@@ -137,11 +164,6 @@ and open the template in the editor.
                 </div>
             </div>
         
- 
-
-        <div id="radio" style="width: 100%;display: block;float:left;">
-  </div>
-
     
         <script>
             $("H1").html(edContent.title);
@@ -154,7 +176,7 @@ and open the template in the editor.
             $("#screen").tabs();
 
             for(x in edContent.playing){
-                $("#radio").append("<input type=\"radio\" id=\"radio"+x+"\" name=\"radio\"><label for=\"radio"+x+"\">"+x+"</label>");
+                $("#radio").append("<input type=\"radio\" id=\"radio"+x+"\" name=\"radio\"><label title=\""+edContent.playing[x].hint+"\" for=\"radio"+x+"\">"+x+"</label>");
                
             }
             $("#radio").buttonset();
@@ -168,11 +190,11 @@ and open the template in the editor.
                 }
                 else if(pIDX<(pCont.values.length-1)) {
                     lineIndex++;
-                    setTimeout(writeCode,3000);
+                    setTimeout(writeCode,2000);
                 }
                 else if(playingIndex<edContent.playing.length) {
                     playingIndex++;
-                    setTimeout(playContent,3000);
+                    setTimeout(playContent,4000);
                 }
                 
             }
