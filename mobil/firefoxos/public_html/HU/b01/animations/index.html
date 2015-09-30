@@ -209,7 +209,7 @@ and open the template in the editor.
                 if(edContent.playing[playingIndex].hint!=null){
                     $("#screen h3").html(edContent.playing[playingIndex].hint);
                     $("#screen audio").attr("src","http://5.249.155.46:8080/SoundServer-1.0/sound?text="+edContent.playing[playingIndex].hint+".");
-                  // document.querySelector("#screen audio").play();
+                  document.querySelector("#screen audio").play();
                 }
                 lineIndex=0;
                 writeCode(dataSource);
