@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Mobil Akadémia</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>        
+        <style>
+             code{
+                 counter-increment: linecounter;
+    list-style-type: decimal;
+    width: 100%;
+    display: block;
+    float: left:                 
+             }
+        </style>
+        <script>
+            var edContent={
+                title:"Building Blocks - Headers ",
+                desc:"...........................",
+                files:[
+                    {id:"manifest",title:"manifest.webapp"},
+                    {id:"index_html",title:"index.html"},
+                    {id:"app_js",title:"app.js"}
+                ],
+                playing:[
+                    {
+                        hint:"Use CSS",
+                        image:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS_U9HSdrLq8VTXigwo0K25tPth5p5l9SeVxqO4Lt93UzdcdEd-Ng",
+                        source:{
+                            container: "app_js",
+                            values:[
+                                {content:'<link href="styles/headers.css" rel="stylesheet" type="text/css"/>'},
+                            ]
+                        }
+                    },
+
+                    {
+                        hint:"Create header area",
+                        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3Z0pTb14ussAhNjEWV9KV28kG18Dt7Zc8mcAVT3acBNtI_Pi",
+                        source:{
+                            container: "app_js",
+                            values:[
+                                {content:'<section role="region">'},
+                                {content:'</section>'},
+                                {position:2,content:'   <header>'},                                
+                                {position:3,content:'   </header>'}
+                            ]
+                        }                    
+                    },
+
+                    {
+                        hint:"set title",
+                        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3Z0pTb14ussAhNjEWV9KV28kG18Dt7Zc8mcAVT3acBNtI_Pi",
+                        source:{
+                            container: "app_js",
+                            values:[
+                                {position:4, content:'   <h1>ToDo</h1>'}
+                            ]
+                        }
+                    },
+
+                    {
+                        hint:"create close button",
+                        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3Z0pTb14ussAhNjEWV9KV28kG18Dt7Zc8mcAVT3acBNtI_Pi",
+                        source:{
+                            container: "app_js",
+                            values:[
+                                {position:4, content:'   <button><span class="icon icon-close">close</span></button>'}
+                            ]
+                        }                    
+                    },
+
+                    {
+                        hint:"create add button",
+                        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3Z0pTb14ussAhNjEWV9KV28kG18Dt7Zc8mcAVT3acBNtI_Pi",
+                        source:{
+                            container: "app_js",
+                            values:[
+                                {position:5, content:'   <menu type="toolbar">'},
+                                {position:6, content:'   </menu>'},
+                                {position:6, content:'      <a href="#"><span class="icon icon-add">add</span></a>'}
+                            ]
+                        }                    
+                    }                    
+                ]         
+            };
+        </script>
+    </head>
+    <body>
+        <div>
+        <h1></h1>
+        <span></span>
+        </div>
+        <br><br>
+            <div id="sources" style="width:60%; display:block; float:left">
+                <ul>
+                </ul>
+            </div>
+        
+            <div id="screen" style="width:35%; display:block;float:left">
+                <ul>
+                    <li><a href="#screen_view">screen</a></li>
+                    <li><a href="#option_view">options</a></li>
+                </ul>
+                <div id="screen_view">
+                    
+                    <img src="">
+                    <audio></audio>
+                    <h3></h3>
+                </div>
+                <div id="option_view">
+                    <table>
+                        <tr>
+                            <td> Gépelési sebesség: </td>
+                            <td>  200 </td> <td> <input type="range" id="writespeed" min="50" max="200"> </td> <td>50 </td>
+                        </tr>
+                        <tr>
+                            <td> Hangerő: </td>
+                            <td>  0  </td> <td> <input type="range" id="power" min="0" max="100"> </td> <td> 100 </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        
+ 
+
+        <div id="radio" style="width: 100%;display: block;float:left;">
+  </div>
+
+    
+        <script>
+            $("H1").html(edContent.title);
+            $("span").html(edContent.desc);
+            for(x in edContent.files){
+                $("#sources ul").append("<li><a href=\"#"+edContent.files[x].id+"\">"+edContent.files[x].title+"</a></li>");
+                $("#sources").append("<div id="+edContent.files[x].id+"  number=\""+x+"\"><pre></pre></div>");
+            }
+            $("#sources").tabs();
+            $("#screen").tabs();
+
+            for(x in edContent.playing){
+                $("#radio").append("<input type=\"radio\" id=\"radio"+x+"\" name=\"radio\"><label for=\"radio"+x+"\">"+x+"</label>");
+               
+            }
+            $("#radio").buttonset();
+            
+            var showText = function (pCont, pozition, index, interval,pIDX) {
+                message= ""+pCont["values"][pIDX].content+"";
+                if (index < message.length) {
+                    $("#"+pCont["container"]+" code:eq("+pozition+")").append(message[index]);
+                    index++;
+                    setTimeout(function () { showText(pCont, pozition, index, interval,pIDX); }, interval);
+                }
+                else if(pIDX<(pCont.values.length-1)) {
+                    writeCode(pCont,++pIDX);
+                }
+                else if(playingIndex<edContent.playing.length) playContent(++playingIndex);
+                
+            }
+            
+            function addText(pCont,pIdx){
+                console.log("AddText:"+pIdx);
+                console.log("AddText:"+$("#"+pCont["container"]+"code:eq("+(pIdx-1)+")"));
+                $("#"+pCont["container"]+" pre "+"code:eq("+(pCont.values[pIdx].position-1)+")").after("<code></code>");
+                showText(pCont, pCont.values[pIdx].position,0, 100,pIdx);  
+            }
+
+            function newText(pCont,pIdx){
+                console.log("NextText:"+pIdx);
+                $("#"+pCont["container"]+" pre").append("<code></code>");
+                showText(pCont, $("#"+pCont["container"]+" pre code").length-1, 0, 100,pIdx);  
+                
+            }
+
+
+            function writeCode(dataSource,pAct){
+                console.log("writeCode:"+pAct);
+                $("#sources").tabs("option","active",$("#"+dataSource["container"]).attr("number"));
+                if(dataSource.values[pAct]["position"]==null)
+                    newText(dataSource,pAct);
+                else 
+                    addText(dataSource,pAct);
+            }
+            
+            function playContent(x){
+                var dataSource;
+                dataSource=edContent.playing[x]["source"];
+                if(edContent.playing[x].image!=null)
+                    $("#screen img").attr("src",edContent.playing[x].image);
+                
+                if(edContent.playing[x].hint!=null){
+                    $("#screen h3").html(edContent.playing[x].hint);
+                    $("#screen audio").attr("src","http://5.249.155.46:8080/SoundServer-1.0/sound?text="+edContent.playing[x].hint);
+                    document.querySelector("#screen audio").play();
+                }
+                writeCode(dataSource,0);
+            }
+            var playingIndex=0;
+            playContent(playingIndex);
+        </script>
+    </body>
+</html>
