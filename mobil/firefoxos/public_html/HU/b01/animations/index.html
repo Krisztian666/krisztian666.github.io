@@ -166,21 +166,43 @@ and open the template in the editor.
         
     
         <script>
-            $("H1").html(edContent.title);
-            $("span").html(edContent.desc);
-            for(x in edContent.files){
-                $("#sources ul").append("<li><a href=\"#"+edContent.files[x].id+"\">"+edContent.files[x].title+"</a></li>");
-                $("#sources").append("<div id="+edContent.files[x].id+"  number=\""+x+"\"><pre></pre></div>");
-            }
-            $("#sources").tabs();
-            $("#screen").tabs();
+            var dataSource;
+            var lineIndex=0
+            var playingIndex=0;
+            $.ajax({
+                url: GetURLParameter("path"), 
+                success: function(result){
+                    console.log(result)
+                    eval("edContent="+result);
 
-            for(x in edContent.playing){
-                $("#radio").append("<input type=\"radio\" id=\"radio"+x+"\" name=\"radio\"><label title=\""+edContent.playing[x].hint+"\" for=\"radio"+x+"\">"+x+"</label>");
-               
-            }
-            $("#radio").buttonset();
+                    $("H1").html(edContent.title);
+                    $("span").html(edContent.desc);
+                    for(x in edContent.files){
+                        $("#sources ul").append("<li><a href=\"#"+edContent.files[x].id+"\">"+edContent.files[x].title+"</a></li>");
+                        $("#sources").append("<div id="+edContent.files[x].id+"  number=\""+x+"\"><pre></pre></div>");
+                    }
+                    $("#sources").tabs();
+                    $("#screen").tabs();
+
+                    for(x in edContent.playing){
+                        $("#radio").append("<input type=\"radio\" id=\"radio"+x+"\" name=\"radio\"><label title=\""+edContent.playing[x].hint+"\" for=\"radio"+x+"\">"+x+"</label>");
+                    }
+                    $("#radio").buttonset();
+                    playContent();
+                }
+            });
             
+  	function GetURLParameter(sParam){
+	    var sPageURL = window.location.search.substring(1);
+	    var sURLVariables = sPageURL.split('&');
+	    for (var i = 0; i < sURLVariables.length; i++){
+	        var sParameterName = sURLVariables[i].split('=');
+	        if (sParameterName[0] == sParam){
+	            return sParameterName[1];
+	        }
+	    }
+	}
+        
             var showText = function (pCont, pozition, index, interval,pIDX) {
                 message= ""+pCont["values"][pIDX].content+"";
                 if (index < message.length) {
@@ -237,10 +259,6 @@ and open the template in the editor.
                 writeCode(dataSource);
             }
 
-            var dataSource;
-            var lineIndex=0
-            var playingIndex=0;
-            playContent();
         </script>
     </body>
 </html>
