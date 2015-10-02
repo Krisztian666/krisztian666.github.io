@@ -10,7 +10,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css"/>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>        
         <style>
              code{
@@ -33,95 +33,95 @@ and open the template in the editor.
                 desc:"...........................",
                 imagePath:"http://krisztian666.github.io/mobil/firefoxos/public_html/HU/b01/animations/",
                 files:[
-                    {id:"manifest",title:"manifest.webapp"},
                     {id:"index_html",title:"index.html"},
-                    {id:"app_js",title:"app.js"}
+                    {id:"add_html",title:"add.html"}
                 ],
                 playing:[
                     {
-                        hint:"Create app description file",
-                        image:"fxosphone.png",
+                        hint:"create new file",
+                        image:"0.png",
                         source:{
-                            container: "manifest",
+                            container: "add_html",
+                            values:[]
+                        }
+                    },     
+                    {
+                        hint:"Create Header in add.html .",
+                        image:"1.png",
+                        source:{
+                            container: "add_html",
                             values:[
-                                {content:'{'},
-                                {content:'   "version": "0.01",'},
-                                {content:'   "name": "ToDo",'},
-                                {content:'   "description": "ToDo",'},
-                                {content:'   "launch_path": "/index.html",'},
-                                {content:'   "fullscreen": "true",'},
-                                {content:'   "icons": {'},
-                                {content:'      "64": "/app64.png",'},
-                                {content:'      "128": "/app128.png",'},
-                                {content:'    },'},
-                                {content:'    "developer": {,'},
-                                {content:'       "name": "......",'},
-                                {content:'       "url": "....",'},
-                                {content:'    }'},
-                                {content:'    "default_locale": "en"'},
-                                {content:'}'}
+                                {content:'<link href="styles/headers.css" rel="stylesheet" type="text/css"/>'},
+                                {content:'<section role="region">'},
+                                {content:'   <header>'},
+                                {content:'      <a href=""><span class="icon icon-back">back</span></a>'},
+                                {content:'      <menu type="toolbar">'},
+                                {content:'         <a href=""><span class="icon icon-add">add</span></a>'},
+                                {content:'      </menu>'},
+                                {content:'      <h1>Create new ToDo</h1>'},
+                                {content:'   </header>'},
+                                {content:'</section>'}
                             ]
                         }
                     },                    
                     {
-                        hint:"Use CSS",
-                        image:"0.png",
+                        hint:"Set back page.",
                         source:{
-                            container: "index_html",
+                            container: "add_html",
                             values:[
-                                {content:'<link href="styles/headers.css" rel="stylesheet" type="text/css"/>'},
+                                {modify:8},
+                                {position:3, content:'      <a href="index.html"><span class="icon icon-back">back</span></a>'},
+                                {delete:9}
                             ]
                         }
-                    },
-
+                    },                    
                     {
-                        hint:"Create header area",
-                        image:"1.png",
+                        hint:"Use CSS.",
                         source:{
-                            container: "index_html",
+                            container: "add_html",
                             values:[
-                                {content:'<section role="region">'},
-                                {content:'</section>'},
-                                {position:2,content:'   <header>'},                                
-                                {position:3,content:'   </header>'}
+                                {position:1, content:'<link href="styles/input_areas.css" rel="stylesheet" type="text/css"/>'},
                             ]
-                        }                    
-                    },
-
+                        }
+                    },                    
                     {
-                        hint:"set title",
+                        hint:"Create inputs.",
                         image:"2.png",
                         source:{
-                            container: "index_html",
+                            container: "add_html",
                             values:[
-                                {position:3, content:'   <h1>ToDo</h1>'}
+                                {content:'<form>'},
+                                {content:'<form>'},
+                                {content:'<p>'},
+                                {content:'<input type="text" placeholder="Name" required>'},
+                                {content:'<button type="reset">Clear</button>'},
+                                {content:'</p>'},
+                                {content:'<p>'},
+                                {content:'<textarea placeholder="Description" required></textarea>'},
+                                {content:'</p>'},
+                                {content:'</form>'},
                             ]
                         }
-                    },
-
+                    },                    
                     {
-                        hint:"create close button",
-                        image:"3.png",
+                        hint:"Horryble, Fonts are big.",
+                        image:"2.png",
                         source:{
-                            container: "index_html",
+                            container: "add_html",
                             values:[
-                                {position:3, content:'   <button><span class="icon icon-close">close</span></button>'}
+                                {content:'<form>'},
+                                {content:'<form>'},
+                                {content:'<p>'},
+                                {content:'<input type="text" placeholder="Name" required>'},
+                                {content:'<button type="reset">Clear</button>'},
+                                {content:'</p>'},
+                                {content:'<p>'},
+                                {content:'<textarea placeholder="Description" required></textarea>'},
+                                {content:'</p>'},
+                                {content:'</form>'},
                             ]
-                        }                    
-                    },
-
-                    {
-                        hint:"create add button",
-                        image:"4.png",
-                        source:{
-                            container: "index_html",
-                            values:[
-                                {position:4, content:'   <menu type="toolbar">'},
-                                {position:5, content:'   </menu>'},
-                                {position:5, content:'      <a href="#"><span class="icon icon-add">add</span></a>'}
-                            ]
-                        }                    
-                    }                    
+                        }
+                    }                     
                 ]         
             };
         </script>
@@ -169,7 +169,7 @@ and open the template in the editor.
             var dataSource;
             var lineIndex=0
             var playingIndex=0;
-            $.ajax({
+/*            $.ajax({
                 url: GetURLParameter("path"), 
                 success: function(result){
                     console.log(result)
@@ -191,7 +191,7 @@ and open the template in the editor.
                     playContent();
                 }
             });
-            
+*/            
   	function GetURLParameter(sParam){
 	    var sPageURL = window.location.search.substring(1);
 	    var sURLVariables = sPageURL.split('&');
@@ -239,7 +239,11 @@ and open the template in the editor.
             function writeCode(){
                 console.log("writeCode:"+lineIndex);
                 $("#sources").tabs("option","active",$("#"+dataSource["container"]).attr("number"));
-                if(dataSource.values[lineIndex]["position"]==null)
+                if(dataSource.values[lineIndex]["delete"]==null)
+                    $("#"+pCont["container"]+" pre "+"code:eq("+(pCont.values[pIdx].modify-1)+")").remove();
+                else if(dataSource.values[lineIndex]["modify"]==null)
+                    $("#"+pCont["container"]+" pre "+"code:eq("+(pCont.values[pIdx].modify-1)+")").css("bacground-color:red");
+                else if(dataSource.values[lineIndex]["position"]==null)
                     newText(dataSource,lineIndex);
                 else 
                     addText(dataSource,lineIndex);
