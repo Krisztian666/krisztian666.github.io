@@ -1,0 +1,10 @@
+<link href="styles/headers.css" rel="stylesheet" type="text/css"/>//{speak:"Use CSS.",position:1}
+<form>
+    <p>//{speak:"Add new input line."}
+        <input type="text" placeholder="Name" required>
+        <button type="reset">Clear</button>
+    </p>
+    <p>//{speak:"Add new line."}
+        <textarea placeholder="Description" required></textarea>//{speak:"Add new input line."}
+    </p>
+</form>

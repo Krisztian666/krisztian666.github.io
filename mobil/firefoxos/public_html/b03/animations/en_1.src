@@ -1,0 +1,21 @@
+
+            <header>
+                <a href=""><span class="icon icon-back">back</span></a>
+                <menu type="toolbar">
+                    <a href=""><span class="icon icon-add">add</span></a>
+                </menu>
+                <h1>Add new</h1>
+            </header>
+            <form>
+                <p>
+                    <input type="text" placeholder="Placeholder" required>
+                    <button type="reset">Clear</button>
+                </p>
+                <p>
+                    <textarea placeholder="Placeholder in textarea" required></textarea>
+                </p>
+            </form>
+        <link href="app.css" rel="stylesheet" type="text/css"/> //{speak:"Use CSS.",position:1}
+                <p><button class="recommend">Add</button></p>//{img:"1.png",position:17,speak:" Add new button.",delete:[5,6,7],writingspeed:100}
+                    <input id="todoname" type="text" placeholder="Placeholder" required> //{position:8,delete:[9],speak:"Set ID."}
+                    <textarea id="tododesc" placeholder="Placeholder in textarea" required></textarea>//{position:12,delete:[13],speak:"Set ID."}

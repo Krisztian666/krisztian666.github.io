@@ -1,0 +1,18 @@
+code{
+                list-style-type: decimal;
+                width: 100%;
+                display: block;
+                float: left;                 
+                border-bottom: 1px solid #0000aa;
+                margin: 10px 0;
+             }
+             
+             pre{
+                 font-size: x-large;
+                 overflow: auto;
+                 height: 500px;
+                 display: block;
+             }
+             .modifing{
+                 background-color: red;
+             }

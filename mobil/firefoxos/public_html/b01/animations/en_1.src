@@ -1,0 +1,10 @@
+<link href="styles/headers.css" rel="stylesheet" type="text/css"/>//{speak:"Use CSS."}
+<section role="region">//{speak:"This is area of Header",img:"1.png"} 
+    <header>      
+    </header>
+</section>
+        <h1>ToDo</h1>//{speak:"Title.",position:3,img:"2.png"}
+        <button><span class="icon icon-close">close</span></button> //{speak:"Left button.",position:3,img:"3.png"}              
+        <menu type="toolbar">//{speak:"Right button.",position:4,img:"4.png"}
+            <a href="#"><span class="icon icon-add">add</span></a>//{position:5}
+        </menu>//{position:6}

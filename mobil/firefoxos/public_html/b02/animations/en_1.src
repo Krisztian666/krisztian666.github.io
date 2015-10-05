@@ -1,0 +1,12 @@
+<link href="styles/headers.css" rel="stylesheet" type="text/css"/>//{speak:"Use CSS."} 
+<section role="region">//{speak:"Copy header from index.html .",img:"1.png"} 
+    <header>
+        <button><span class="icon icon-close">close</span></button>
+        <menu type="toolbar">
+            <a href="#"><span class="icon icon-add">add</span></a>
+        </menu>
+        <h1>ToDo</h1>
+    </header>
+</section>
+        <h1>Add new</h1>//{speak:"Modify title.",delete:[8],position:7,img:"1.png"}
+        <a href="index.html"><span class="icon icon-back">back</span></a>//{speak:"Set navigation and left icon.",delete:[4],position:3}
