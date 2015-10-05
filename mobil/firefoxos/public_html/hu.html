@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Firefox OS Magyarul</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>        
+        <script>
+            function viewModalVideo(pID){
+                $("#"+pID).dialog({modal: true,width:'100%',height:'auto'});
+                $("#"+pID+" video").play();
+            } 
+            
+            $(function () {
+                $(".accordion").accordion({heightStyle: "content"});
+                $(".tabs").tabs({
+                    load: function( event, ui ) {
+                        $(".subaccordion").accordion({heightStyle: "content"});
+                    }
+                });
+            }); 
+        </script>
+    </head>
+    <body>
+        <h1> A: Firefox OS - alapok (7)</h1>
+        <div class="accordion">
+            <h3>A Fireofox OS platform, és fejlesztői környezet(7)</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="a01/motivation.html">Motiváció</a></li>
+                        <li><a href="a01/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="a01/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>JSON</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="a02/motivation.html">Motiváció</a></li>
+                        <li><a href="a02/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="a02/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>HTML5 alapok</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="a03/motivation.html">Motiváció</a></li>
+                        <li><a href="a03/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="a03/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>CSS3 alapok</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="a04/motivation.html">Motiváció</a></li>
+                        <li><a href="a04/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="a04/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>JavaScript alapok</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="a05/motivation.html">Motiváció</a></li>
+                        <li><a href="a05/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="a05/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>DOM és JavaScript</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="a06/motivation.html">Motiváció</a></li>
+                        <li><a href="a06/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="a06/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Eseménykezelés</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="a07/motivation.html">Motiváció</a></li>
+                        <li><a href="a07/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="a07/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+        
+        <h1> B: Firefox OS - felhasználói felület kialakítása (19)</h1>
+        <div class="accordion">
+            <h3>Firefox OS UI: BuildingBlocks - headers</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b01/motivation.html">Motiváció</a></li>
+                        <li><a href="b01/http://krisztian666.github.io/mobil/firefoxos/public_html/util/player/player.html?path=http://krisztian666.github.io/mobil/firefoxos/public_html/b01/animations/en.conf">ismeret átadás</a></li>
+                        <li><a href="b01/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks - input areas</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b02/motivation.html">Motiváció</a></li>
+                        <li><a href="b02/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b02/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks - buttons</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b03/motivation.html">Motiváció</a></li>
+                        <li><a href="b03/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b03/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks - status</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b04/motivation.html">Motiváció</a></li>
+                        <li><a href="b04/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b04/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks - action menu </h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b05/motivation.html">Motiváció</a></li>
+                        <li><a href="b05/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b05/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks - lists</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b06/motivation.html">Motiváció</a></li>
+                        <li><a href="b06/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b06/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks - layout</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b07/motivation.html">Motiváció</a></li>
+                        <li><a href="b07/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b07/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks - confirm</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b08/motivation.html">Motiváció</a></li>
+                        <li><a href="b08/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b08/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks - drawer</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b09/motivation.html">Motiváció</a></li>
+                        <li><a href="b09/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b09/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  progress and activity</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b10/motivation.html">Motiváció</a></li>
+                        <li><a href="b10/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b10/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  toolbars</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b11/motivation.html">Motiváció</a></li>
+                        <li><a href="b11/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b11/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  switches</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b12/motivation.html">Motiváció</a></li>
+                        <li><a href="b12/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b12/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  object menu</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b13/motivation.html">Motiváció</a></li>
+                        <li><a href="b13/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b13/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  scrolling</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b14/motivation.html">Motiváció</a></li>
+                        <li><a href="b14/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b14/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  Tabs</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b15/motivation.html">Motiváció</a></li>
+                        <li><a href="b15/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b15/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  Edit mode</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b16/motivation.html">Motiváció</a></li>
+                        <li><a href="b16/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b16/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  Fillters</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b17/motivation.html">Motiváció</a></li>
+                        <li><a href="b17/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b17/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  Seek bar</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b18/motivation.html">Motiváció</a></li>
+                        <li><a href="b18/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b18/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Firefox OS UI: BuildingBlocks -  Value selector</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="b19/motivation.html">Motiváció</a></li>
+                        <li><a href="b19/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="b19/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h1> C: Firefox OS - Adattárolás (8)</h1>
+        <div class="accordion">
+            <h3>Session & Local Storage használata</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="c01/motivation.html">Motiváció</a></li>
+                        <li><a href="c01/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="c01/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Indexed DB - a tároló működése</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="c02/motivation.html">Motiváció</a></li>
+                        <li><a href="c02/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="c02/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Indexed DB - adatok tárolása</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="c03/motivation.html">Motiváció</a></li>
+                        <li><a href="c03/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="c03/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Indexed DB - adatok lekérdezése</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="c04/motivation.html">Motiváció</a></li>
+                        <li><a href="c04/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="c04/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Indexed DB - adatok módosítása</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="c05/motivation.html">Motiváció</a></li>
+                        <li><a href="c05/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="c05/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Indexed DB - adatok törlése</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="c06/motivation.html">Motiváció</a></li>
+                        <li><a href="c06/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="c06/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Névjegyzék</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="c07/motivation.html">Motiváció</a></li>
+                        <li><a href="c07/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="c07/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Storage API</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="c08/motivation.html">Motiváció</a></li>
+                        <li><a href="c08/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="c08/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>            
+        </div>
+        
+        <h1> D: Firefox OS - Hálózat kezelés (4)</h1>
+        <div class="accordion">
+            <h3>Hálózati információk lekérdezése</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="d01/motivation.html">Motiváció</a></li>
+                        <li><a href="d01/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="d01/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>XMLHTTPRequest és CORS</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="d02/motivation.html">Motiváció</a></li>
+                        <li><a href="d02/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="d02/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>WebSocket </h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="d03/motivation.html">Motiváció</a></li>
+                        <li><a href="d03/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="d03/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>JSON</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="d04/motivation.html">Motiváció</a></li>
+                        <li><a href="d04/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="d04/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <h1> E: Firefox OS - Közvetlen eszköz elérés (6)</h1>
+        <div class="accordion">
+            <h3>Akumulátor információk elérése</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="e01/motivation.html">Motiváció</a></li>
+                        <li><a href="e01/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="e01/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Vibrációs motor használata</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="e02/motivation.html">Motiváció</a></li>
+                        <li><a href="e02/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="e02/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Képernyő orientációs érzékelő használata</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="e03/motivation.html">Motiváció</a></li>
+                        <li><a href="e03/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="e03/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Telefon mozgatásának kezelése</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="e04/motivation.html">Motiváció</a></li>
+                        <li><a href="e04/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="e04/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Felhasználói közelségérzékelő használata</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="e05/motivation.html">Motiváció</a></li>
+                        <li><a href="e05/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="e05/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Fényérzékelő használata</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="e06/motivation.html">Motiváció</a></li>
+                        <li><a href="e06/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="e06/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h1> F: Firefox OS - Navigáció (4)</h1>
+        <div class="accordion">
+            <h3>GPS információk elérése</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="f01/motivation.html">Motiváció</a></li>
+                        <li><a href="f01/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="f01/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Google Map használata</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="f02/motivation.html">Motiváció</a></li>
+                        <li><a href="f02/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="f02/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Open Stret Map Használata</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="f03/motivation.html">Motiváció</a></li>
+                        <li><a href="f03/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="f03/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Here Map Használata</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="f04/motivation.html">Motiváció</a></li>
+                        <li><a href="f04/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="f04/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+            
+        <h1> G: Firefox OS - Egyéb API-k (2)</h1>
+        <div class="accordion">
+            <h3>Értesítés</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="g01/motivation.html">Motiváció</a></li>
+                        <li><a href="g01/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="g01/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Riasztás</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="g02/motivation.html">Motiváció</a></li>
+                        <li><a href="g02/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="g02/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+        
+        <h1> H: Firefox OS - Alkalmazások közötti kommunikáció (6)</h1>
+        <div class="accordion">
+            <h3>Web Activity bevezető</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="h01/motivation.html">Motiváció</a></li>
+                        <li><a href="h01/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="h01/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Kapcsolat a Böngésző alkalmazással</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="h02/motivation.html">Motiváció</a></li>
+                        <li><a href="h02/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="h02/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Kapcsolat a Levelező alkalmazással</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="h03/motivation.html">Motiváció</a></li>
+                        <li><a href="h03/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="h03/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Kapcsolat a Telefon hívás alkalmazással</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="h04/motivation.html">Motiváció</a></li>
+                        <li><a href="h04/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="h04/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Kapcsolat a Kamera alkalmazással</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="h05/motivation.html">Motiváció</a></li>
+                        <li><a href="h05/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="h05/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Kapcsolat saját alkalmazásokkal</h3>
+            <div>
+                <div class="tabs">
+                    <ul>
+                        <li><a href="h06/motivation.html">Motiváció</a></li>
+                        <li><a href="h06/knowledge.html">ismeret átadás</a></li>
+                        <li><a href="h06/excercise.html">Gyakorlás</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
