@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Firefox OS Magyarul</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>    
+    <body>
+        <div class="modal" id="modal_b08" style='display:none'>
+            <video src="https://www.dropbox.com/s/fgtw2vph8vymdib/video.avi?dl=0" controls="" width="800" autoplay=""></video>
+        </div>
+        <div class="subaccordion">
+            <h3>Új ismeretek</h3>
+            <div>
+                <button onclick="viewModalVideo('modal_b08');"> VIDEO</button>
+                <p>
+A Confirm komponenst a megerősítést kérő műveletek elérésekor használhatjuk az alkalmazásainkban.
+Segítségével teljes képernyős üzeteben lehet megerősíteni a cselekvés vagy tájékoztatja a felhasználót egy eseményről. 
+Megerősítés nézetet visszavonhatatlan műveletek végrehajtása előtt használjuk az alkalmzásainkban, ilyen például egy elem végleges törlése.
+Megerősítést úgy célszerű kialakítani, hogy megakadályoza az aktuális feladatokat. 
+Ennek eredményeként a felhasználókank törődniük kell az ilyen eseményekkel.
+A megerősítés nézet jelenleg modális módban érhető el. Ez azt jelenti, hogy elfoglalja a teljes képernyőt, 
+és válasszal kell lezárni a működését. A megerősítő komponensnek tartalmaznia kell egy szöveges részt, és egy elfogadó gombot.
+Az ikon, szöveges tartalom és visszalépő gomb opcionális a megjelenítésében.
+
+A komponens használatához a confirm.css állományt kell az alkalmazás oldalaink számára elérhetővé tenni.
+A modális panelt egy FORM elembe kell beágyazni. Az informatív tartalmak megjelenítésére egy szekció, 
+a navigációhoz egy menü áll a rendelkezésünkre. Navigációs fombok esetén ne használjuk a submit típust.
+                </p>
+            </div>
+            <h3>Releváns hivatkozások a témakörben</h3>
+            <div>
+                <ul>
+                    <li>http://buildingfirefoxos.com/building-blocks/layout.html</li>
+                    <li>https://developer.mozilla.org/en-US/Apps/Design/Firefox_OS_building_blocks</li>
+                    <li>https://github.com/mozilla-b2g/gaia/tree/master/shared/style</li>
+                    <li>https://www.mozilla.org/en-US/styleguide/products/firefox-os/</li>
+                    <li>https://hacks.mozilla.org/2013/02/firefox-os-building-blocks-to-the-rescue/</li>
+                    <li>https://wiki.mozilla.org/Gaia/Design/BuildingBlocks</li>
+                </ul>
+            </div>
+            <h3>Ellenörző teszt kérdések</h3>
+            <div>
+                <ul>
+                    <li> 
+                        <p>Melyik CSS álomány tartalmazza a Confirm komponenst?</p>
+                        <ul>
+                            <li>( ) conf.css </li>	
+                            <li>( ) confirm.css </li>
+                            <li>(x) confirm.css</li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Milyen HTML elem opcionális a Confirm komponens használatában?</p>
+                        <ul>
+                            <li>(x) H1 </li>	
+                            <li>( ) SECTION </li>
+                            <li>( ) FORM </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Melyik HTML elemre NEM lesz szükségünk egy CONFIRM létrehoásához?</p>
+                        <ul>
+                            <li>( ) BUTTON </li>	
+                            <li>(x) SPAN </li>
+                            <li>( ) FORM </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Melyik HTML jelenít meg címsort a Confirm komponensben?</p>
+                        <ul>
+                            <li>( ) SECTION </li>	
+                            <li>( ) HEADER </li>
+                            <li>(x) H1 </li>
+                        </ul>
+                    </li>
+                    <li> 
+                        <p>Mely elem tartalmazza a CONFIRM komponens gombjait?</p>
+                        <ul>
+                            <li>( ) ARTICLE</li>	
+                            <li>( ) SECTION</li>
+                            <li>(x) MENU</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

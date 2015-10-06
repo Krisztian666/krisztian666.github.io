@@ -1,0 +1,27 @@
+        <link href="app.css" rel="stylesheet" type="text/css"/> //{speak:"Use CSS."}
+        <link href="styles/object_menu.css" rel="stylesheet" type="text/css"/>
+        <script src="menu.js" type="text/javascript"></script>//{speak:"And JavaScript."}
+
+        <form role="dialog" data-type="object"> //{speak:"Create area of Object menu."}
+            <header>Actions</header> //{speak:"Set Header."}
+            <section>
+                <h2>ToDo</h2>//{speak:"Set Title."}
+                <ul>//{speak:"Set options."}
+                    <li id="list">
+                        <p>List</p>
+                        <p>View all ToDos</p>
+                    </li>
+                    <li id="add">
+                        <p>Add</p>
+                        <p>Create new ToDo</p>
+                    </li>
+                </ul>
+                <h2>System</h2>
+                <ul>
+                    <li><a href="#">Exit</a></li>
+                </ul>
+            </section>
+            <menu type="toolbar"> //{speak:"Create back button."}
+                <button class="full" id="cancel">Cancel</button>
+            </menu>
+        </form>        

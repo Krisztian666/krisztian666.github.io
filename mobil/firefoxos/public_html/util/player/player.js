@@ -26,10 +26,6 @@ function writeingCodeFromString(result){
                 var data={};
                 if(kc.length>1) eval("data="+kc[1]);
                 data["content"]=kc[0];
-//                for(i=1; i<kc.length; i++){
-//                    var command=kc[i].split(":");
-//                    data[command[0]]=command[1];
-//                }
                 dataSource.values.push(data);
             });
             dataSource["sourceurl"]=null;
@@ -111,19 +107,10 @@ function removeCode(pContainer,pLineNumbers){
 
 
 function startingPlayer(){
-            loadResource(getURLParameter("path"));
-}
-function startingPlayer(pUrl){
-            loadResource(pUrl);
-}
-
-
-function loadResource(pUrl){
             $.ajax({
-                url: pUrl,
+                url: getURLParameter("path"),
                 success: function(result){
                     eval("edContent="+result);
-
                     $("H1").html(edContent.title);
                     $("span").html(edContent.desc);
                     for(x in edContent.files){
@@ -137,8 +124,7 @@ function loadResource(pUrl){
             });
             
 }
-
-
+        
             function writeCode(){
                 $("#sources").tabs("option","active",$("#"+dataSource["container"]).attr("number"));
                 
