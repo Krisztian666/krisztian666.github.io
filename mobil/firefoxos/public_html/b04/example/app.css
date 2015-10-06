@@ -1,4 +1,7 @@
-html
-{
+html{
     font-size: xx-small;
+}
+
+section[role="status"]{
+    display: none;
 }

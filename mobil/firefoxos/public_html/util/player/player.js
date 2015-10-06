@@ -111,8 +111,16 @@ function removeCode(pContainer,pLineNumbers){
 
 
 function startingPlayer(){
+            loadResource(getURLParameter("path"));
+}
+function startingPlayer(pUrl){
+            loadResource(pUrl);
+}
+
+
+function loadResource(pUrl){
             $.ajax({
-                url: getURLParameter("path"),
+                url: pUrl,
                 success: function(result){
                     eval("edContent="+result);
 
@@ -129,7 +137,6 @@ function startingPlayer(){
             });
             
 }
-        
 
 
             function writeCode(){

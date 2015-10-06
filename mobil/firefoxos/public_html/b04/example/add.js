@@ -9,4 +9,10 @@ function eventNewToDo(e){  //{speak:"create button on the button event"}
     var dataDesc = document.querySelector("#tododesc").value;
     var newtodo= new todo(dataName,dataDesc,"","");
     addTodo(newtodo);
+    document.querySelector('section[role="status"]').style.display="block";
+    setTimeout(hideStatus,3000);
+}
+
+function hideStatus(){
+    document.querySelector('section[role="status"]').style.display="none";
 }
