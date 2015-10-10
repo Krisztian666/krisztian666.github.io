@@ -1,0 +1,18 @@
+<form>
+    <p>
+        <input id="todoname" type="text" placeholder="Name" required>
+        <button type="reset">Clear</button>
+    </p>
+    <p>
+        <textarea id="tododesc" placeholder="Description" required></textarea>
+    </p>
+    <p>
+        <button class="recommend">Add</button>
+    </p>    
+</form>
+    <p>//{speak:"Add date input.",position:8,img:"1.png"}
+        <input type="date" id="tododate" placeholder="Date">//{position:9}
+    </p>//{position:10}
+    <p>//{speak:"Add time input.",position:11,img:"2.png"}
+        <input type="time" id="todotime" placeholder="Time">//{position:12}
+    </p>//{position:13}

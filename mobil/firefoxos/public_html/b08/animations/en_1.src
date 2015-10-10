@@ -1,0 +1,13 @@
+    <head>
+        <link href="styles/headers.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/drawer.css" rel="stylesheet" type="text/css"/>
+        <link href="app.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body  role="application">
+        <section data-type="sidebar">
+        .....
+        </section>        
+        <section id="drawer" role="region">
+            ....
+        </section>
+    </body>

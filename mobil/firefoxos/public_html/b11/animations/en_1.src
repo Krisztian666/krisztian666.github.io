@@ -1,0 +1,8 @@
+<header>
+    <a href="index.html"><span class="icon icon-back">back</span></a>
+    <h1>Add new</h1>
+</header>
+<progress class="pack-activity" value="0" max="100"></progress> //{speak:"Create progress."}
+
+
+progress {display: none;} //{speak:"Set default display mode in app.css."}

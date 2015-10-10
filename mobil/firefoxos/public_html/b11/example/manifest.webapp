@@ -1,0 +1,17 @@
+{
+    "version": "0.01",
+    "name": "ToDo",
+    "description": "ToDo",
+    "launch_path": "/index.html",
+    "fullscreen": "true",
+    "icons": {
+        "64": "/app64.png",
+        "128": "/app128.png"
+    },
+    "developer": {
+        "name": "Krisztian Karoczkai",
+        "url": "http://oefirefoxos.sourceforge.net/"
+    },
+    "default_locale": "en"
+  
+}

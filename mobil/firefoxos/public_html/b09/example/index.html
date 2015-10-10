@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo</title>
+        <meta charset="UTF-8">
+        <link href="styles/headers.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/drawer.css" rel="stylesheet" type="text/css"/>
+        <link href="app.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body  role="application">
+        <section data-type="sidebar">
+            <header>
+                <h1>Menu</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="add.html">Add</a></li>
+                    <li><a href="index.html">Refresh</a></li>
+                    <li><a href="confirm.html">Exit</a></li>
+                </ul>
+            </nav>
+        </section>        
+        <section id="drawer" role="region">
+            <header>
+                <a href="#content"><span class="icon icon-menu">hide sidebar</span></a>
+                <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+                <menu type="toolbar">
+                    <a href="add.html"><span class="icon icon-add">add</span></a>
+                </menu>
+                <h1>ToDo</h1>
+            </header>
+             <div role="main"></div>
+        </section>
+    </body>
+</html>
+<section id="drawer" role="region">
+    <header>
+        <a href="#content"><span class="icon icon-menu">hide sidebar</span></a>
+        <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+        <menu type="toolbar">
+            <a href="add.html"><span class="icon icon-add">add</span></a>
+        </menu>
+        <h1>ToDo</h1>
+    </header>
+    <div role="main"></div>
+</section>

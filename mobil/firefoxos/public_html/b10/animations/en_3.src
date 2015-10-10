@@ -1,0 +1,9 @@
+
+function todo(pName,pDesc,pDate,pTime){
+    this.name=pName;
+    this.desc=pDesc;
+    this.date=pDate;
+    this.time=pTime;
+}
+function todo(pName,pDesc,pDate,pTime,pImportant){//{speak:"Set important parameter",position:1,delete:[2]}
+    this.important=pImportant;//{position:1}

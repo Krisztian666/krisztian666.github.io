@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit</title>
+        <meta charset="UTF-8">
+        <link href="styles/edit_mode.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/headers.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/input_areas.css" rel="stylesheet" type="text/css"/>
+        <link href="app.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/switches.css" rel="stylesheet" type="text/css"/>
+        <script src="app.js" type="text/javascript"></script>
+        <link href="styles/buttons.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+            <section role="region">
+                <header>
+                    <a href="index.html"><span class="icon icon-back">back</span></a>
+                    <menu type="toolbar">
+                        <button>done</button>
+                    </menu>
+                    <h1>Edit</h1>
+                </header>
+            </section>
+            <p>
+                <input id="todoname" type="text" placeholder="Name" required>
+            </p>
+
+            <p>
+                <textarea id="tododesc" placeholder="Description" required></textarea>
+            </p>
+            <p> 
+                Important: 
+                <label class="pack-switch">
+                    <input type="checkbox" id="todoimportant">
+                    <span></span>
+                </label>
+            </p>
+            <p>
+                <input type="date" id="tododate" placeholder="Date">
+            </p>
+            <p>
+                <input type="time" id="todotime"  placeholder="Time">
+            </p>
+            <menu>
+                <button>Clear</button>
+            </menu>
+    </body>
+</html>

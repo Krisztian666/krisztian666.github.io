@@ -1,0 +1,10 @@
+label.pack-switch {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  background: none;
+}
+  //{delete:[6],img:"1.png"}
+  margin-right: 10px;//{position:5,img:"2.png"}

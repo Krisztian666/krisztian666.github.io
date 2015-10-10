@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>        
+var data=[
+    {d:"html>"},
+    {d:"   head>"},
+    {d:"       link>"},
+    {d:"   /head>"},
+    {d:"   szilva>"},
+    {d:"   alma>"},
+    {d:"       burgonya>"},
+    {d:"   /alma>"},
+    {d:"   szilva>"},
+    {d:"/html>"}
+]; 
+
+function sort(){
+    for(var x in data){
+        data[x].t=0;
+        for(var i=0;data[x].d.charAt(i)==" ";i++)
+            data[x].t++;//="/"+data[x].d.charAt(i);
+    }
+    for(var x in data){
+        document.querySelector("pre").innerHTML+="<code>"+data[x].d+"/"+data[x].d.charAt(1)+"("+data[x].t+")</code><br>";
+    }
+    
+}
+</script>
+    </head>
+    <body>
+        
+        <pre>TODO write content</pre>
+        <script>sort();</script>
+    </body>
+</html>

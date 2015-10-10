@@ -1,0 +1,12 @@
+<section data-type="sidebar"> 
+    <header>
+        <h1>Menu</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="add.html">Add</a></li>  //{speak:"Link to add page."}
+            <li><a href="index.html">Refresh</a></li>
+            <li><a href="confirm.html">Exit</a></li> //{speak:"Link to exit page."}
+        </ul>
+    </nav>
+</section>        

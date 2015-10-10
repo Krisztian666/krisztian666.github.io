@@ -1,0 +1,16 @@
+<link href="styles/lists.css" rel="stylesheet" type="text/css"/>
+<link href="styles/layout.css" rel="stylesheet" type="text/css"/> //{speak:"Change CSS.",delete:[1]}
+...
+<section id="drawer" role="region"> //{speak:"View source of list."}
+    <div role="main">
+        <section data-type="list">
+            <header>Actual</header>
+            <ul>
+            </ul>
+        </section>
+    </div>
+</section>
+<section id="drawer" role="region" class="vbox fit scroll">//{speak:"Modify class of header.",position:3,delete:[4],img:"1.png"}
+        <section class="gaia-list fit scroll sticky">//{speak:"Modify class of list.",position:5,delete:[6]}
+            <article>//{speak:"Insert article",position:6}
+            </article>//{position:10}

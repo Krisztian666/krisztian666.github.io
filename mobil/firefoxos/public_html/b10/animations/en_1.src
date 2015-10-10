@@ -1,0 +1,25 @@
+<form>
+    <p>
+        <input id="todoname" type="text" placeholder="Name" required>
+        <button type="reset">Clear</button>
+    </p>
+    <p>
+        <textarea id="tododesc" placeholder="Description" required></textarea>
+    </p>
+    <p>
+        <input type="date" id="tododate" placeholder="Date">
+    </p>
+    <p>
+        <input type="time" id="todotime" placeholder="Time">
+    </p>
+    <p>
+        <button class="recommend">Add</button>
+    </p>    
+</form>
+
+    <p> Important: //{speak:"Insert important input.",position:8,img:"1.png"}
+        <label class="pack-switch">//{position:9}
+        <input type="checkbox" id="todoimportant">//{position:10}
+        <span></span>//{position:11}
+        </label>//{position:12}
+    </p>//{position:13}

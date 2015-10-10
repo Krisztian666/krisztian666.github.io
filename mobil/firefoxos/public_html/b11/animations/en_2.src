@@ -1,0 +1,12 @@
+function eventNewToDo(e){  
+    var dataName = document.querySelector("#todoname").value;
+    var dataDesc = document.querySelector("#tododesc").value;
+    var dataDate = document.querySelector("#tododate").value; 
+    var dataTime = document.querySelector("#todotime").value; 
+    var dataImportant = document.querySelector("#todoimportant").checked; 
+    var newtodo= new todo(dataName,dataDesc,dataDate,dataTime,dataImportant);
+    addTodo(newtodo);
+    setTimeout(hideStatus,3000);
+}
+    document.querySelector("progress").stylye.display="block";//{speak:"View progress.",position:1}
+    document.querySelector('section[role="status"]').style.display="none";//{speak:"Hide progress.",position:9}
