@@ -1,0 +1,10 @@
+document.addEventListener('DOMContentLoaded', function()
+....
+    document.querySelector("div[role='toolbar'] button[data-icon='add']") //{speak:"Click add button."}
+        .addEventListener("click",
+        function(){window.location.href="add.html";});
+    document.querySelector("div[role='toolbar'] button[data-icon='refresh']")//{speak:"Click refresh button."}
+        .addEventListener("click",
+        function(){window.location.href="index.html";});    
+},false);
+

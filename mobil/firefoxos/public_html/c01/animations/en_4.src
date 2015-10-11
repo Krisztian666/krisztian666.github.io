@@ -1,0 +1,17 @@
+function eventNewToDo(e){  
+    var item=new todo(todos.length,"","","","",false);
+    if(sessionStorage.getItem("todoid")!=null) //{speak:"Edit option."}
+        item=todos[parseInt(sessionStorage.getItem("todoid"))];
+    item.name = document.querySelector("#todoname").value;
+    item.desc = document.querySelector("#tododesc").value;
+    item.date = document.querySelector("#tododate").value; 
+    item.time = document.querySelector("#todotime").value; 
+    item.important = document.querySelector("#todoimportant").checked; 
+    if(sessionStorage.getItem("todoid")!=null){ //{speak:"Edit option."}
+        todos[parseInt(sessionStorage.getItem("todoid"))]=item;
+        localStorage.setItem("todo",JSON.stringify(todos));
+    }
+    else addTodo(item);
+    document.querySelector('section[role="status"]').style.display="block";
+    setTimeout(hideStatus,3000);
+}

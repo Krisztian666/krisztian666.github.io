@@ -1,0 +1,8 @@
+
+function addTodo(pTodo) {
+    objectStore=db.transaction(["toDoList"], "readwrite").objectStore("toDoList");    
+    var req=objectStore.add(pTodo);
+    req.onsuccess=function(event){
+        console.log("save");
+    }
+}

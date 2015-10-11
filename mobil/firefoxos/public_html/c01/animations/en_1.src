@@ -1,0 +1,10 @@
+function init(){ //{speak:"Load items from localStorage."}
+    var old=localStorage.getItem("todo");
+    if(old==null) old="[]"; // {speak:"Storage is empty."}
+    todos=JSON.parse(old);
+}
+
+function addTodo(pTodo){
+    todos.push(pTodo);
+    localStorage.setItem("todo",JSON.stringify(todos)); //{spaek:"Save all items."}
+}

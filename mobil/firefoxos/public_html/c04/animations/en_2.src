@@ -1,0 +1,15 @@
+function autoCall(){
+    objectStore=db.transaction(["toDoList"], "readwrite").objectStore("toDoList");    //{speak:"Open object store"}
+    var res0=objectStore.index("name").openCursor(IDBKeyRange.lowerBound("", true)); //{speak:"Select all"}
+    res0.onsuccess = function(event) {
+    var cursor = event.target.result;//{speak:"List of ToDos."}
+        if(cursor) {
+            var todoItemUI = createToDoUI(cursor.value);
+            document.querySelector("#alltodo UL").appendChild(todoItemUI); //{speak:"All items view"}
+            if(todoItemUI.important)
+                document.querySelector("#importanttodo UL").appendChild(todoItemUI.cloneNode(true)); //{speak:"Important items view"}
+        cursor.continue();
+      } 
+      else {console.log('Entries all displayed.');}
+    };
+}

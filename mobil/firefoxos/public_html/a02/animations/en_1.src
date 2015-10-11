@@ -1,0 +1,17 @@
+{
+    "version": "0.01",
+    "name": "ToDo", //{speak:"Name of application"}
+    "description": "ToDo",
+    "launch_path": "/index.html", //{speak:"Stert application"}
+    "fullscreen": "true",
+    "icons": {
+        "64": "/app64.png",
+        "128": "/app128.png"
+    },
+    "developer": {  //{speak:"Fejlesztő."}
+        "name": "...",
+        "url": "..."
+    },
+    "default_locale": "en"
+  
+}

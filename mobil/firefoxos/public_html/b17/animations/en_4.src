@@ -1,0 +1,14 @@
+function crateToDoUI(pValue) {
+    var p0 = document.createElement("P");
+    p0.innerHTML = pValue.name;
+
+    var a = document.createElement("A");
+    a.setAttribute("data-icon", "edit");
+    a.href = "edit.html";
+    
+    var li = document.createElement("LI");
+    li.appendChild(a);
+    li.appendChild(p0);
+    return li;
+}
+

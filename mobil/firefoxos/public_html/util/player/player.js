@@ -92,7 +92,7 @@ function newText(pCont, pIdx) {
 
 
 function speak(pTxt){
-    $("#screen h3").html(pTxt);
+    $("h3").html(pTxt);
 //    $("#screen audio").attr("src","http://5.249.155.46:8080/SoundServer-1.0/sound?text="+pTxt+".");
 //    document.querySelector("#screen audio").play();
 }

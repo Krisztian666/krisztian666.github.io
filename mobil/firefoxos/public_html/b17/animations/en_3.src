@@ -1,0 +1,7 @@
+function showTabpanel(e) {
+    var panels = document.querySelectorAll(".bb-tabpanel");
+    for (var i = 0; i < panels.length; i++)
+        panels[i].style.visibility = "hidden";
+    document.querySelector("#" + e.currentTarget.getAttribute("aria-controls")).style.visibility = "visible";
+    return false;
+}

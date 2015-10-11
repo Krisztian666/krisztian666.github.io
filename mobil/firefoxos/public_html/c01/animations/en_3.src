@@ -1,0 +1,16 @@
+function editTodo(e){ //{speak:"Create new function."}
+    var todoid=e.currentTarget.getAttribute("todoid");
+    sessionStorage.setItem("todoid",todoid);
+    window.location.href="add.html";
+}
+
+function crateToDoUI(pValue) { //{speak:"Modify user interface."}
+...
+    var a = document.createElement("A");
+    a.setAttribute("data-icon", "edit");
+    a.href = "edit.html";
+...
+}
+    var a = document.createElement("SPAN"); //{position:8,delete:[9]}
+    a["todoid"] = pValue.id; //{position:11,delete:[12]}
+    a.addEventListener("click",editTodo);//{position:11}

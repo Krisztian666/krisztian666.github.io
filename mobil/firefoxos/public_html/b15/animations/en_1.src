@@ -1,0 +1,18 @@
+[data-icon]:not([data-l10n-id]):not([aria-label]):not([aria-hidden="true"]):after {
+	background: #333;
+	color: #fff;
+	position: absolute;
+	width: 20rem;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	content: "Icon is not localized..."; 
+	z-index: 9999;
+}
+ //{speak:"Remove attribute of content.",delete:[8],position:10}
+
+[data-icon]:not([data-l10n-id]):not([aria-label]):not([aria-hidden="true"]):before {
+	/* Highlight cases where icons are not localized and still visible to screen
+	   reader */
+	background: rgba(255, 0, 0, 0.4);
+}
+//{speak:"Remove attribute of background.",delete:[16],position:17}

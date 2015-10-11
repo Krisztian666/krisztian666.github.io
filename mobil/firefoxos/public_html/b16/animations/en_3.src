@@ -1,0 +1,8 @@
+document.addEventListener('DOMContentLoaded', function(){ //{speak:"This event run after created DOM."}
+    for(var x in todos){
+...
+        document.querySelector("DIV[role='main'] UL").appendChild(li);//{speak:"View in User Interface."}
+    }
+    
+},false);
+if(todos[x].important)//{speak:"Set value of fillter.",position:3}

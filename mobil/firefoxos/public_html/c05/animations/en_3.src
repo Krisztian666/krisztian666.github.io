@@ -1,0 +1,10 @@
+function eventNewToDo(e){  
+    item.name = document.querySelector("#todoname").value;
+    item.desc = document.querySelector("#tododesc").value;
+    item.date = document.querySelector("#tododate").value; 
+    item.time = document.querySelector("#todotime").value; 
+    item.important = document.querySelector("#todoimportant").checked; 
+    addTodo(item);
+    document.querySelector('section[role="status"]').style.display="block";
+    setTimeout(hideStatus,3000);
+}

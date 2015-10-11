@@ -1,0 +1,29 @@
+var db;
+var objectStore;
+var todos = [];
+
+function init() {
+    request = window.indexedDB.open("ToDo", 1);
+    request.onerror = function (event) {
+        console.log("Hiba van");
+    };
+
+    request.onsuccess = function (event) {
+    
+    console.log("DB open");
+        db = request.result;
+    };
+
+    request.onupgradeneeded = function (event) {
+        console.log("DB onupgradeneeded");
+        db = event.target.result;
+        objectStore = db.createObjectStore("toDoList", {keyPath: "id", autoIncrement: true});
+        objectStore.createIndex("name", "name", {unique: false});
+        objectStore.createIndex("date", "date", {unique: false});
+        objectStore.createIndex("time", "time", {unique: false});
+    };
+}
+
+
+
+

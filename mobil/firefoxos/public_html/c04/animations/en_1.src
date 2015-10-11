@@ -1,0 +1,9 @@
+function init() {
+    request = window.indexedDB.open("ToDo", 1);
+...
+    request.onsuccess = function (event) {
+        db = request.result;//{speak:"Database ready"}
+    };
+...
+}
+        autoCall();//{speak:"Call this function.",position:5}

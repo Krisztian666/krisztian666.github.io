@@ -1,0 +1,14 @@
+var item;
+function autoCall(){
+    item=new todo("","","","",false);
+    if(sessionStorage.getItem("todoid")){
+        objectStore=db.transaction(["toDoList"], "readwrite").objectStore("toDoList");    
+        var res0=objectStore.get(parseInt(sessionStorage.getItem("todoid")));
+        res0.onsuccess = function(event) {
+            console.log(res0.result);
+            item=res0.result;
+            load(item);
+        };
+        
+    }
+}

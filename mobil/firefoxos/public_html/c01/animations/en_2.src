@@ -1,0 +1,16 @@
+window.onload = function(){ 
+    document.querySelector(".recommend").addEventListener("click",eventNewToDo);
+    document.querySelector("FORM").onsubmit = function(){return false;};
+    if(sessionStorage.getItem("todoid")!=null)
+        load();
+};
+
+function load(){
+    var item=todos[parseInt(sessionStorage.getItem("todoid"))];
+    document.querySelector("#todoname").value=item.name;
+    document.querySelector("#tododesc").value=item.desc;
+    document.querySelector("input[type='checkbox']").value=item.important;
+    document.querySelector("#tododate").value=item.date;
+    document.querySelector("#todotime").value=item.time;
+    document.querySelector("header menu button").addEventListener("click",save);    
+}

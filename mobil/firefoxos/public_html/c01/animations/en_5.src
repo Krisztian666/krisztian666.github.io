@@ -1,0 +1,12 @@
+document.addEventListener('DOMContentLoaded', function () { 
+    for (var x in todos) { //{speak:"Loads todos."}
+        var todoItemUI=crateToDoUI(todos[x]);
+        document.querySelector("#alltodo UL").appendChild(todoItemUI);
+        if(todos[x].important)
+            document.querySelector("#importanttodo UL").appendChild(todoItemUI.cloneNode(true));
+    }
+    document.querySelector("#tabpanel1").style.visibility="visible"; //{speak:"Visible default panel."}
+    var filteritems=document.querySelectorAll("a[role='tab']");//{speak:"Set click events in tab."}
+    for (var i = 0; i < filteritems.length; i++)
+        filteritems[i].addEventListener("click", showTabpanel);
+}, false);
