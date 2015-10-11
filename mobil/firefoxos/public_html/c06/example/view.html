@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo</title>
+        <meta charset="UTF-8">
+        <link href="styles/headers.css" rel="stylesheet" type="text/css"/>
+        <link href="app.css" rel="stylesheet" type="text/css"/>
+        <link href="styles/layout.css" rel="stylesheet" type="text/css"/>
+        <script src="app.js" type="text/javascript"></script>
+        <script src="view.js" type="text/javascript"></script>
+    </head>
+    <body  role="application">
+        <section role="region" class="vbox fit scroll">
+            <header>
+                <a href="index.html"><span class="icon icon-back">back</span></a>
+                <menu type="toolbar">
+                    <button><span class="icon icon-compose" >remove</span></button>
+                </menu>                
+                <h1>View</h1>
+            </header>
+            <section class="gaia-list fit scroll sticky" >
+                <article>
+                    <ul>
+                        <li><p id="todoname"></p></li>
+                        <li><p id="tododesc"></p></li>
+                        <li><p id="tododate"></p></li>
+                        <li><p id="todotime"></p></li>
+                    </ul>
+                </article>    
+            </section>                        
+        </section>
+    </body>
+</html>

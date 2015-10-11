@@ -1,0 +1,6 @@
+function load(item) {
+    document.querySelector("#todoname").innerHTML = item.name;
+    document.querySelector("#tododesc").innerHTML = item.desc;
+    document.querySelector("#tododate").innerHTML = item.date;
+    document.querySelector("#todotime").innerHTML = item.time;
+}

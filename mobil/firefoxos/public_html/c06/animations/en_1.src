@@ -1,0 +1,10 @@
+<section class="gaia-list fit scroll sticky" >
+    <article>
+        <ul>
+            <li><p id="todoname"></p></li>
+            <li><p id="tododesc"></p></li>
+            <li><p id="tododate"></p></li>
+            <li><p id="todotime"></p></li>
+        </ul>
+    </article>    
+</section>    

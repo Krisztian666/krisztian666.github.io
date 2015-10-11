@@ -1,0 +1,7 @@
+function removeToDo() {
+    objectStore = db.transaction(["toDoList"], "readwrite").objectStore("toDoList");
+    var res0 = objectStore.delete(parseInt(sessionStorage.getItem("todoid")));//{speak:"Remove ToDo"}
+    res0.onsuccess = function (event) {
+        window.location.href = "index.html";
+    };
+}
