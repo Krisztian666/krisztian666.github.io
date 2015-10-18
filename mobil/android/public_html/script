@@ -1,0 +1,31 @@
+v="h0"
+for i in {1..3}
+do
+echo $v$i
+   mkdir $v$i
+   mkdir $v$i/hu
+   mkdir $v$i/en
+   mkdir $v$i/example
+   mkdir $v$i/animations
+
+   cd $v$i/hu
+   touch motivation.html
+   touch excercise.html
+   cd ..
+   cd ..
+
+   cd $v$i/en
+   touch motivation.html
+   touch excercise.html
+   cd ..
+   touch knowledge.html
+   cd ..
+   touch knowledge.html
+ 
+   cd $v$i/animations
+   touch en.conf
+   touch hu.conf
+   cd ..
+   cd ..
+   
+done
