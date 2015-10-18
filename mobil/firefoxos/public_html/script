@@ -1,5 +1,5 @@
-v="h0"
-for i in {1..6}
+v="a0"
+for i in {6..8}
 do
 echo $v$i
    mkdir $v$i
