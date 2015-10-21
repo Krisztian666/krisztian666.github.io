@@ -141,8 +141,20 @@ function startingPlayer(path){
                     playContent();
                 }
             });
-            
 }
+    
+
+
+    function loadAnimation() {
+        $("#playercontent").dialog({
+            resizable: true,
+            width : screen.width-100,
+            height : screen.height -100,
+            modal: true
+        });
+        startingPlayer(confpath);
+    }
+    
         
             function writeCode(){
                 $("#sources").tabs("option","active",$("#"+dataSource["container"]).attr("number"));
