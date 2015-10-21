@@ -124,6 +124,25 @@ function startingPlayer(){
             });
             
 }
+
+function startingPlayer(path){
+            $.ajax({
+                url: path,
+                success: function(result){
+                    eval("edContent="+result);
+                    $("#playercontentheader H1").html(edContent.title);
+                    $("#playercontentheader span").html(edContent.desc);
+                    for(x in edContent.files){
+                        $("#sources ul").append("<li><a href=\"#"+edContent.files[x].id+"\">"+edContent.files[x].title+"</a></li>");
+                        $("#sources").append("<div id="+edContent.files[x].id+"  number=\""+x+"\"><pre></pre></div>");
+                    }
+                    $("#sources").tabs();
+                    $("#screen").tabs();
+                    playContent();
+                }
+            });
+            
+}
         
             function writeCode(){
                 $("#sources").tabs("option","active",$("#"+dataSource["container"]).attr("number"));
