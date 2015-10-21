@@ -5,8 +5,10 @@ code{
                 float: left;                 
                 border-bottom: 1px solid #0000aa;
                 margin: 10px 0;
+background: none;
              }
              
+#playercontent{z-index:1001;}
              pre{
                  font-size: x-large;
                  overflow: auto;

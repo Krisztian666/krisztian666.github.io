@@ -130,7 +130,7 @@ function startingPlayer(path){
                 url: path,
                 success: function(result){
                     eval("edContent="+result);
-                    $("#playercontentheader H1").html(edContent.title);
+                    $("#playercontentheader").attr("title",edContent.title);
                     $("#playercontentheader span").html(edContent.desc);
                     for(x in edContent.files){
                         $("#sources ul").append("<li><a href=\"#"+edContent.files[x].id+"\">"+edContent.files[x].title+"</a></li>");
@@ -138,6 +138,12 @@ function startingPlayer(path){
                     }
                     $("#sources").tabs();
                     $("#screen").tabs();
+                            $("#playercontent").dialog({
+            resizable: true,
+            width : screen.width-100,
+            height : screen.height -100,
+            modal: true
+        });
                     playContent();
                 }
             });
@@ -146,12 +152,6 @@ function startingPlayer(path){
 
 
     function loadAnimation() {
-        $("#playercontent").dialog({
-            resizable: true,
-            width : screen.width-100,
-            height : screen.height -100,
-            modal: true
-        });
         startingPlayer(confpath);
     }
     
