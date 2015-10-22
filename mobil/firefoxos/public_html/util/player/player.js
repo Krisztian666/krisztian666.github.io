@@ -130,7 +130,7 @@ function startingPlayer(path){
                 url: path,
                 success: function(result){
                     eval("edContent="+result);
-                    $("#playercontentheader").attr("title",edContent.title);
+                    $("#playercontent").attr("title",edContent.title);
                     $("#playercontentheader span").html(edContent.desc);
                     for(x in edContent.files){
                         $("#sources ul").append("<li><a href=\"#"+edContent.files[x].id+"\">"+edContent.files[x].title+"</a></li>");

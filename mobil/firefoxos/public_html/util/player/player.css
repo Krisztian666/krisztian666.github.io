@@ -7,7 +7,7 @@ code{
                 margin: 10px 0;
 background: none;
              }
-#view-top, wrapper, wrapper-header,sequence-nav-button{z-index:100 !important; }             
+#view-top, #wrapper, #wrapper-header,.sequence-nav-button{z-index:100 !important; }             
 .ui-button-icon-primary, .ui-icon, .ui-icon-closethick{margin:none !important;}
 #playercontent{z-index:1000;}
              pre{
@@ -19,3 +19,6 @@ background: none;
              .modifing{
                  background-color: red;
              }
+#playercontent {
+text-align: center;
+}
