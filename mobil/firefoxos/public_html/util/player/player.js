@@ -92,7 +92,7 @@ function newText(pCont, pIdx) {
 
 
 function speak(pTxt){
-    $("h3").html(pTxt);
+    $("#playercontent h3").html(pTxt);
 //    $("#screen audio").attr("src","http://5.249.155.46:8080/SoundServer-1.0/sound?text="+pTxt+".");
 //    document.querySelector("#screen audio").play();
 }
@@ -140,7 +140,7 @@ function startingPlayer(path){
                     $("#screen").tabs();
     $("#playercontent").dialog({
         resizable: true,
-        position: ['top', 100],
+        position: [100, 100],
         width : screen.width-100,
         height : screen.height -100,
         modal: true
