@@ -138,13 +138,14 @@ function startingPlayer(path){
                     }
                     $("#sources").tabs();
                     $("#screen").tabs();
-                            $("#playercontent").dialog({
-            resizable: true,
-            width : screen.width-100,
-            height : screen.height -100,
-            modal: true
-        });
-                    playContent();
+    $("#playercontent").dialog({
+        resizable: true,
+        position: ['top', 100],
+        width : screen.width-100,
+        height : screen.height -100,
+        modal: true
+    });
+    playContent();
                 }
             });
 }
