@@ -1,0 +1,21 @@
+Put Information into a Database
+
+Insert data into the database by passing a 
+ContentValues object to the insert() method:
+see insertToDo method.
+
+
+Delete Information from a Database
+
+To delete rows from a table, you need to provide selection criteria 
+that identify the rows. The database API provides a mechanism for 
+creating selection criteria that protects against SQL injection. 
+The mechanism divides the selection specification into a selection 
+clause and selection arguments. The clause defines the columns to 
+look at, and also allows you to combine column tests. The arguments 
+are values to test against that are bound into the clause. Because 
+the result isn't handled the same as a regular SQL statement, 
+it is immune to SQL injection.
+see deleteToDo method.
+
+

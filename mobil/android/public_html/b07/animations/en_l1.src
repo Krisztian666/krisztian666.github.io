@@ -1,0 +1,18 @@
+<RelativeLayout .... >
+....
+
+    <TextView
+        android:id="@+id/aboutTewtView" //{speak:"Add TextView ID"}
+        android:text="About ToDo" //{speak:"Set the content."}
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button //{speak:"Button"}
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add new ToDo ..."
+        android:layout_below="@+id/textViewHelloWord"
+    <ImageButton//{speak:"Modify to ImageButton.", position:9,delete:[10]}
+        android:src="@drawable/todoicon"/> //{img:"scr-new-main-img.png", speak:"Define the image."}
+

@@ -1,0 +1,7 @@
+Add new Blank Activity in Android Studio. //{speak:"Add new Blank Activity"}
+
+Select File menu > New > Activity > Blank Activity
+
+Set the name: AddNewActivity
+
+Add another activity called DetailsActivity as well.

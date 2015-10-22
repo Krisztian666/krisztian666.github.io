@@ -1,0 +1,6 @@
+- Linear Layout
+
+A layout that organizes its children into a 
+single horizontal or vertical row. It creates 
+a scrollbar if the length of the window exceeds 
+the length of the screen.

@@ -11,6 +11,32 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>TODO write content
+        
+        //{img:"scr-.png", speak:"Translate About"}
+        //{speak:""}
+        
+        {id:"manifest",title:"AndroidManifest.xml"},        
+        {
+            hint:"-",
+            image:"scr-main.png",
+            source:{
+                container: "manifest",
+                sourceurl : "en_manifest.src"
+            }
+        },
+        
+        {id:"mainactivity",title:"MainActivity.java"},       
+        {
+            hint:"Set the menu",
+            image:"scr-main.png",
+            source:{
+                container: "mainactivity",
+                sourceurl : "en_MainActivity.java"
+            }
+        },         
+        
+        
+        </div>
     </body>
 </html>

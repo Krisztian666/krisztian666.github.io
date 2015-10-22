@@ -1,0 +1,11 @@
+<manifest ... >
+    <application
+...
+        <activity
+            android:name=".ConfigureActivity"
+            android:label="@string/title_activity_configure" >
+        </activity>
+    </application>
+
+</manifest>
+

@@ -1,0 +1,10 @@
+Create a Database Using a SQL Helper
+
+Once you have defined how your database looks, you should 
+implement methods that create and maintain the database and tables.
+Just like files that you save on the device's internal storage, 
+Android stores your database in private disk space that's associated 
+application. Your data is secure, because by default this area is 
+not accessible to other applications.
+
+

@@ -1,0 +1,12 @@
+ActionBar
+
+The action bar is a window feature that identifies the user 
+location, and provides user actions and navigation modes. 
+
+
+The action bar is included in all activities that use the 
+Theme.Holo theme (or one of its descendants), which is the 
+default theme when either the targetSdkVersion or minSdkVersion 
+attribute is set to "11" or higher.
+
+

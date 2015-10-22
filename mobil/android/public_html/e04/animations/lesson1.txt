@@ -1,0 +1,39 @@
+XmlPullParser
+
+XML Pull Parser is an interface that defines parsing 
+functionality provided in XMLPULL V1 API
+
+There are two key methods: next() and nextToken(). 
+While next() provides access to high level parsing events, 
+nextToken() allows access to lower level tokens. 
+
+The current event state of the parser can be determined by calling 
+the getEventType() method. Initially, the parser is in 
+the START_DOCUMENT state.
+
+The method next() advances the parser to the next event. 
+The int value returned from next determines the current 
+parser state and is identical to the value returned from 
+following calls to getEventType ().
+
+Th following event types are seen by next()
+
+START_TAG
+    An XML start tag was read. 
+TEXT
+    Text content was read; the text content can be retrieved 
+    using the getText() method. (when in validating mode next() 
+    will not report ignorable whitespace, use nextToken() instead) 
+END_TAG
+    An end tag was read 
+END_DOCUMENT
+    No more events are available 
+
+see: ToDoXmlPullParser.java
+
+
+Add a new button to the ImportActivity layout file,
+wich calls the importFromXml method. It reads the todos.xml file 
+from the assets folder, and imports the ToDos.
+
+

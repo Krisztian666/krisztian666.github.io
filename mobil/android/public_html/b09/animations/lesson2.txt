@@ -1,0 +1,23 @@
+Accessing Resources
+
+Once you provide a resource in your application, 
+you can apply it by referencing its resource ID. 
+All resource IDs are defined in your project's 
+R class, which will be automatically generated.
+It contains resource IDs for all the resources 
+in your res/ directory.
+
+e.g.:
+R.drawable.todoicon
+
+Layout files:
+R.layout.activity_main
+
+View:
+R.id.date
+R.id.nameTextView
+
+And the menu items:
+R.id.action_addnew
+R.id.action_settings
+

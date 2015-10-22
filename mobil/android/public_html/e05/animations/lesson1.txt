@@ -1,0 +1,25 @@
+JSON
+
+JSON, (JavaScript Object Notation), is an open standard format that 
+uses human-readable text to transmit data objects consisting 
+of attribute–value pairs. (Wikipedia)
+
+
+JsonReader
+Reads a JSON (RFC 4627) encoded value as a stream of tokens.
+
+Parsing JSON
+To create a recursive descent parser for your own JSON streams, 
+first create an entry point method that creates a JsonReader.
+
+Next, create handler methods for each structure in your JSON text. 
+You'll need a method for each object type and for each array type. 
+
+see: ToDoJSONParser.java
+
+
+Add a new button to the ImportActivity layout file,
+wich calls the importFromJSON method. It reads the todos.json file 
+from the assets folder, and imports the ToDos.
+
+

@@ -1,0 +1,14 @@
+<manifest ... >
+
+    <application
+...
+
+        <service
+            android:name=".service.ToDoServiceBound"
+            android:enabled="true"
+            android:exported="false" >//{speak:"Available only from this app."}
+        </service>
+
+    </application>
+
+</manifest>

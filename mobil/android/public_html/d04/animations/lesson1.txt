@@ -1,0 +1,19 @@
+Saving Data in SQL Databases
+
+Saving data to a database is ideal for repeating or structured data.
+The APIs you'll need to use a database on Android are available 
+in the android.database.sqlite package.
+
+
+Define a Schema and Contract
+
+One of the main principles of SQL databases is the schema: 
+a formal declaration of how the database is organized. 
+The schema is reflected in the SQL statements that you use to 
+create your database. You may find it helpful to create a companion 
+class, known as a contract class, which explicitly specifies the 
+layout of your schema in a systematic and self-documenting way.
+A contract class is a container for constants that define names 
+for URIs, tables, and columns.
+
+

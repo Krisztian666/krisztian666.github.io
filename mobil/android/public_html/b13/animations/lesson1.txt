@@ -1,0 +1,33 @@
+The basics of Material Design
+
+Material design is a comprehensive guide for visual, motion, 
+and interaction design across platforms and devices.
+
+Android 5.0 (API level 21) and above includes support 
+for material design apps. You can add many material design features 
+to your app while maintaining compatibility with versions of 
+Android earlier than 5.0.
+
+To create apps with material design:
+
+- Apply the material theme in your app, specify a style that 
+inherits from android:Theme.Material 
+To be compatible with devices running previous releases of Android, 
+use two different theme.
+1. Use a theme that inherits from an older theme in 
+res/values/styles.xml
+2. Define a theme with the same name that inherits from the 
+material theme in res/values-v21/styles.xml.
+
+- Customize View Shadows and Outlines
+Define new background drawable in directory:
+res/drawable/
+in the example: outline_rectangle.xml
+
+- To update an existing app to incorporate material design, 
+update your layouts following material design guidelines. 
+Also make sure to incorporate depth (elevation), touch feedback, 
+and animations. Create your layout files for Android 5.0 (API level 21) 
+inside res/layout-v21/ 
+and keep your alternative layout files for earlier versions of Android 
+inside res/layout/.

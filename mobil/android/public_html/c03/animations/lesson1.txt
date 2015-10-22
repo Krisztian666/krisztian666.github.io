@@ -1,0 +1,16 @@
+BroadcastReceiver
+
+A BroadcastReceiver will receive intents sent by sendBroadcast().
+You can either dynamically register an instance of this class 
+with Context.registerReceiver() or statically publish an 
+implementation through the <receiver> tag in your AndroidManifest.xml.  
+
+
+- Creating the Broadcast Receiver ToDoReceiver.java
+
+- Registering Broadcast Receiver in AndroidManifest.xml
+
+- Create Add New functionality in the application
+
+- Send Broadcast from  AddNewActivity
+

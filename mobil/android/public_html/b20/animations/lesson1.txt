@@ -1,0 +1,22 @@
+ViewPager
+
+This lesson shows you how to do screen slides with a 
+ViewPager provided by the support library. ViewPagers 
+can animate screen slides automatically. 
+
+
+Create the Views
+
+Create layout files that you will later use for the content. 
+The example uses 3 layouts for the AddNewActivity. 
+view_pager_left.xml   - Left example page
+view_pager_right.xml  - Right example page
+activity_add_new_xml  - Use the existing layout in the middle
+
+Create a layout that contains a ViewPager.
+
+Create PagerAdapter
+Add ToDoPagerAdapter.java
+
+Set the pager in the Activity
+AddNewActivity.java

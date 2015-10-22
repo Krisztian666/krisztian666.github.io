@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest ... >
+
+    <application
+...
+
+        <receiver //{speak:"Registering Broadcast Receiver"}
+            android:name=".ToDoReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.example.todo.ADD_NEW_TODO">
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
+

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ToDo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- About Dialog -->
+    <string name="about">About</string>
+    <string name="about_txt">This is a demo ToDo application.</string>
+    <string name="about_called">About is called...</string>
+
+    <!-- Activity Main -->
+    <string name="about_todo">About ToDo</string>
+    <string name="add_new_todo">Add new ToDo</string>
+
+    <!-- Activity AddNew -->
+    <string name="todo">ToDo</string>
+    <string name="todo_name">ToDo Name</string>
+    <string name="priority">Priority</string>
+...
+    <string name="close">Close</string>
+
+</resources>

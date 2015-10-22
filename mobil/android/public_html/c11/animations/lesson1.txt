@@ -1,0 +1,14 @@
+Service Starting after Boot Process
+
+
+Starting a Service
+
+You can start a service from an activity or other application 
+component by passing an Intent (specifying the service to start) 
+to startService(). The Android system calls the service's 
+onStartCommand() method and passes it the Intent. 
+(You should never call onStartCommand() directly.)
+
+Create a Broadcast Receiver which is called when the boot process 
+completed, and start the service.
+

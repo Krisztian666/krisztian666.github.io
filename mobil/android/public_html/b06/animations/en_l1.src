@@ -1,0 +1,23 @@
+<RelativeLayout .... >
+
+    <TextView //{speak:"TextView"}
+        android:id="@+id/textViewHelloWord" //{speak:"Define id."}
+        android:text="@string/hello_world" //{speak:"Default text."}
+        android:layout_width="wrap_content" //{speak:"Specifies the width of the view.  "}
+        android:layout_height="wrap_content" /> //{speak:"Specifies the height of the view.  "}
+
+    <Button //{speak:"Button"}
+        android:id="@+id/addButton"
+        android:layout_width="match_parent" //{speak:"Define the size."}
+<!-- match_parent: 
+        It should be as big as its parent.-->
+
+        android:layout_height="wrap_content"
+<!-- wrap_content: 
+        It should be only big enough to enclose its content.--> 
+
+        android:text="Add new ToDo ..."
+        android:layout_below="@+id/textViewHelloWord"/> //{speak:"Define the position."}
+<!-- It is below the textViewHelloWord in RelativeLayout. --> 
+
+</RelativeLayout>

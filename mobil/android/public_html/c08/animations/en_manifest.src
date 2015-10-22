@@ -1,0 +1,13 @@
+<manifest ... >
+
+    <application
+...
+
+        <service
+            android:name=".service.ToDoServiceIntent"
+            android:exported="false" >//{speak:"Available only from this app."}
+        </service>
+
+    </application>
+
+</manifest>

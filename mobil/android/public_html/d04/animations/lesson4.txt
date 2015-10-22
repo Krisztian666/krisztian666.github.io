@@ -1,0 +1,38 @@
+Using an Existing SQLite Database
+
+
+The database is stored in 
+/data/data/com.example.todo/databases/mytododb.db file.
+So the database has to be copied over from the app to that 
+location. We do this using the following package: 
+Android SQLite Asset Helper.
+https:/ /github.com/jgilfelt/android-sqlite-asset-helper
+
+- Add the dependency in build.gradle
+"
+dependencies {
+    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+}
+"
+
+- In the Android Project Structure you need to place the database in: 
+Project/app/src/main/assets.databases/mytododb.db file.
+
+- Create a java DbHelper class that uses the SQLiteAssetHelper, 
+instead of SQLiteOpenHelper. It is implemented as an extension 
+to SQLiteOpenHelper.
+
+"
+public class MyDb extends SQLiteAssetHelper{
+  private static final String DB_NAME = "mytododb.db";
+  private static final int DB_VERSION = 1;
+  public MyDB(Context context){
+    super(context, DB_NAME, null, DB_VERSION);
+  }
+}
+"
+It is similar to the ToDo example, set the DB_NAME.
+
+The initial copy is done when we first call getReadableDatabase().
+It is ready. See the next lesson.
+

@@ -1,0 +1,11 @@
+Menu
+
+Android provides a standard XML format to define menu items. 
+Instead of building a menu in your activity's code, you should 
+define a menu and all its items in an XML menu resource. 
+You can then inflate the menu resource (load it as a Menu object) 
+in your activity or fragment.
+
+To define the menu for the MainActivity, open the generated 
+XML file menu_main.xml inside your project's res/menu/ directory.
+

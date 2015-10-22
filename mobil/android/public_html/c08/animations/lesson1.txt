@@ -1,0 +1,19 @@
+Traditionally, there are two classes you can extend 
+to create a started service:
+
+- Service
+
+This is the base class for all services. When you extend 
+this class, it's important that you create a new thread in 
+which to do all the service's work, because the service uses 
+your application's main thread, by default, which could slow 
+the performance of any activity your application is running.
+
+- IntentService
+
+This is a subclass of Service that uses a worker thread to handle 
+all start requests, one at a time. This is the best option if you 
+don't require that your service handle multiple requests simultaneously. 
+All you need to do is implement onHandleIntent(), which receives the 
+intent for each start request so you can do the background work. 
+

@@ -1,0 +1,21 @@
+Animations
+
+Android supports more animation types. 
+
+- Tweened animation
+
+You can use the view animation system to perform tweened 
+animation on Views. Tween animation calculates the animation 
+with information such as the start point, end point, size, 
+rotation, and other common aspects of an animation. 
+
+The animation XML file belongs in the res/anim/ directory 
+of your Android project. The file must have a single root 
+element: this will be either a single <alpha>, <scale>, 
+<translate>, <rotate>, interpolator element, or <set> element 
+that holds groups of these elements (which may include 
+another <set>). By default, all animation instructions 
+are applied simultaneously. To make them occur sequentially, 
+you must specify the startOffset attribute, as shown 
+in the example.
+

@@ -1,0 +1,18 @@
+
+...
+        <receiver android:name=".ToDoWidget" >//{speak:"declare AppWidgetProvider class"} 
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/to_do_widget_info" />//{speak:"AppWidgetProviderInfo"}
+        </receiver>
+
+        <activity android:name=".ToDoWidgetConfigureActivity" >//{speak:"Optional Config Activity"} 
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+...

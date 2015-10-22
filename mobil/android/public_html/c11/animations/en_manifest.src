@@ -1,0 +1,22 @@
+<manifest ... >
+
+ <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>//{speak:"Permission is required."}
+
+
+    <application
+...
+
+        <receiver //{speak:"Set BootCompletedBroadcastReceiver."}
+            android:name=".BootCompletedBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

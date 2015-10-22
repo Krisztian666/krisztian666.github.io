@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http:/ /schemas.android.com/apk/res/android"
+    package="com.example.todo" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <service //{speak:"Add new service"}
+            android:label="@string/app_name"
+            android:name=".ToDoWallpaper" //{speak:"The wallpaper class"}
+            android:permission="android.permission.BIND_WALLPAPER">//{speak:"Required permission"}
+        <intent-filter>
+        <action android:name="android.service.wallpaper.WallpaperService"/>//{speak:"Use WallpaperService"}
+        </intent-filter>
+            <meta-data android:name="android.service.wallpaper"
+                android:resource="@xml/todowallpaper"/>//{speak:"todowallpaper.xml in /res/xml directory"}
+        </service>
+
+...

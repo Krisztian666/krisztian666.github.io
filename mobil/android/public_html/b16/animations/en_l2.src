@@ -1,0 +1,46 @@
+    <TextView android:text="@string/add_new_todo" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TableRow>
+        <TextView android:text="@string/todo"/>//{img:"scr-addnew-hu.png", speak:"Translate"}
+        <EditText android:id="@+id/toDoNameEditText"
+            android:text="@string/todo_name"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/priority"/>
+        <RadioGroup android:id="@+id/priorityRadioGroup"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/pLowRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/low"/>
+            <RadioButton
+                android:id="@+id/pMedRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/medium"/>
+            <RadioButton
+                android:id="@+id/pHighRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/high"/>
+        </RadioGroup>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/date"/>
+        <DatePicker android:id="@+id/date"></DatePicker>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/all_day"/>
+        <CheckBox android:id="@+id/allDayCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/description"/>
+        <EditText android:id="@+id/descriptionEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </TableRow>

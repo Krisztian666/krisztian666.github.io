@@ -1,0 +1,18 @@
+    <TableRow>
+        <TextView android:text="@string/add_contact"/>
+        <Button android:id="@+id/add_new_contact_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addNewContactToToDo"//{speak:"Call the contact list."}
+            android:text="@string/select"/>
+
+    </TableRow>
+    <TableRow>//{speak:"Show the selected contact."}
+        <TextView android:text="@string/name"/>
+        <TextView android:id="@+id/contact_name"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/phone"/>
+        <TextView android:id="@+id/contact_phone"/>
+    </TableRow>
+</TableLayout>

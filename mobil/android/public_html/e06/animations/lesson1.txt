@@ -1,0 +1,8 @@
+Google Cloud Messaging
+
+
+Send data from your server to your users' devices, and receive 
+messages from devices on the same connection. The GCM service handles 
+all aspects of queueing of messages and delivery to client 
+applications running on target devices.
+

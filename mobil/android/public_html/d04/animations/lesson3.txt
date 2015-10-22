@@ -1,0 +1,4 @@
+To access your database, instantiate your subclass 
+of SQLiteOpenHelper (DbHelper).
+
+

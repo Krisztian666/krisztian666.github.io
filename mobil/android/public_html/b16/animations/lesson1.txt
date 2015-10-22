@@ -1,0 +1,50 @@
+Localizing with Resources
+
+Android will run on many devices in many regions. To reach the 
+most users, your application should handle text, audio files, 
+numbers, currency, and graphics in ways appropriate to the 
+locales where your application will be used. 
+
+- Use the String Resources
+
+You can reference your string resources in your source code 
+and other XML files using the resource name defined by 
+the <string> element's name attribute.
+
+In your source code, you can refer to a string resource with 
+the syntax R.string.<string_name>. There are a variety of methods 
+that accept a string resource this way. E.g.:
+
+Get a string resource from your app's Resources:
+String hello = getResources().getString(R.string.hello_world);
+
+Supply a string resource to a method that requires a string:
+TextView textView = new TextView(this);
+textView.setText(R.string.hello_world);
+
+In other XML files, you can refer to a string resource with 
+the syntax @string/<string_name> whenever the XML attribute 
+accepts a string value.
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/hello_world" />
+
+
+- Create Locale Directories and String Files
+
+Create the resource subdirectories and string resource files:
+    res/
+       values/
+           strings.xml (This is the default, always fill in!)
+       values-hu/      
+           strings.xml (Hungarian language file)
+
+You can use the locale qualifier (or any configuration qualifer) 
+on any resource type, such as if you want to provide localized 
+versions of your bitmap drawable.
+
+To handle the translations, you can use the Translations editor of //{img:"as-trans-editor.png", speak:"Translations Editor"}
+Android Studio as well.
+

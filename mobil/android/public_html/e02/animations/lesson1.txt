@@ -1,0 +1,55 @@
+AsyncTask
+
+AsyncTask enables proper and easy use of the UI thread. 
+This class allows to perform background operations and publish 
+results on the UI thread without having to manipulate threads 
+and/or handlers. AsyncTask is designed to be a helper class 
+around Thread and Handler. It should ideally be used for short 
+operations, a few seconds at the most.
+
+Usage
+
+AsyncTask must be subclassed to be used. The subclass will override at 
+least one method (doInBackground(Params...)), and most often will 
+override a second one (onPostExecute(Result).)
+
+Once created, a task is executed very simply:
+
+ new ImportToDoTask().execute(url1, url2, url3);
+(used in the new ImportActivity)
+
+
+
+HttpURLConnection
+
+An URLConnection for HTTP (RFC 2616) used to send and receive 
+data over the web. Data may be of any type and length. This class 
+may be used to send and receive streaming data whose length is not 
+known in advance. 
+
+
+In the ToDo example we
+
+- create Import menu item as learned.//{img:"scr-main-menu.png", speak:"Import"}
+
+- create a new ImportActivity with Android Studio
+  with a layout containing
+  an EditText for the URL of the imported data, and 
+  an Import button, which calls the importFromHttp method 
+  of the ImportActivity
+
+- importFromHttp method executes the ImportToDoTask
+
+- ImportToDoTask downloads and imports the ToDo datas
+
+- It uses the new HttpURLConnectionHandler
+
+- Add ACCESS_NETWORK_STATE permission to manifest.
+
+The example file (todos.txt) is in the package 
+com.example.todo.datahandler.net.http
+The format is the same as we in the FileHandler used:
+"
+Todo2FromString#;#MED#;#1446337080170#;#false#;#Description2#;#http:/ /android.com
+"
+

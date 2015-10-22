@@ -1,0 +1,6 @@
+ImageButton
+
+Displays a button with an image.
+
+Save an image to your Android project's res/drawable/ directory.
+

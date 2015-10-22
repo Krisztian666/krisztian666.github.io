@@ -1,0 +1,5 @@
+
+Create  ToDoContactsAdapter and UI for showing 
+the contact list, use it on AddNewActivity, and 
+save the selected datas.
+

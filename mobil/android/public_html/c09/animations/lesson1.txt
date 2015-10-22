@@ -1,0 +1,11 @@
+A bound service 
+
+is one that allows application components to bind to it 
+by calling bindService() in order to create a long-standing 
+connection (and generally does not allow components to start 
+it by calling startService()).
+
+You should create a bound service when you want to interact with 
+the service from activities and other components in your application 
+or to expose some of your application's functionality to other 
+applications, through interprocess communication (IPC).

@@ -1,0 +1,56 @@
+<TableLayout ....>
+
+
+    <TextView android:text="Add new ToDo" //{speak:"Button"}
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TableRow>
+        <TextView android:text="Event"/>
+        <EditText android:id="@+id/eventNameEditText" //{speak:"EditText"}
+            android:text="Event Name"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="Priority"/>
+        <RadioGroup android:id="@+id/priorityRadioGroup" //{speak:"RadioButtons"}
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/pLowRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="low"/>
+            <RadioButton
+                android:id="@+id/pMedRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="medium"/>
+            <RadioButton
+                android:id="@+id/pHighRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="high"/>
+        </RadioGroup>
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="Date"/>
+        <DatePicker android:id="@+id/date"></DatePicker> //{speak:"DatePicker"}
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="All Day"/>
+        <CheckBox android:id="@+id/allDayCheckBox" //{speak:"CheckBox"}
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="Description"/>
+        <EditText android:id="@+id/descriptionEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+
+</TableLayout>

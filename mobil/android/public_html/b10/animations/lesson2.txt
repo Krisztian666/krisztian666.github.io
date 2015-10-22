@@ -1,0 +1,9 @@
+- Frame-by-frame 
+
+An animation defined in XML that shows a sequence 
+of images in order (like a film).
+
+The animation XML file belongs in the res/drawable/ directory 
+of your Android project. The filename will be used as the resource ID.
+Save the images of the animation here.
+

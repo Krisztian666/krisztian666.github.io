@@ -1,0 +1,34 @@
+Update a Database
+
+When you need to modify a subset of your database values, 
+use the update() method.
+see: updateToDo method.
+
+
+Read Information
+
+To read from a database, use the query() method, passing it your 
+selection criteria and desired columns. The results of the query are 
+returned to you in a Cursor object.
+To look at a row in the cursor, use one of the Cursor move methods, 
+which you must always call before you begin reading values. Generally, 
+you should start by calling moveToFirst(), which places the 
+"read position" on the first entry in the results. For each row, 
+you can read a column's value by calling one of the Cursor get methods, 
+such as getString() or getLong().
+see: 
+  getAllToDo and 
+  getAllToDoArrayList which processes the returned Cursor.
+  getToDo returns one ToDo.
+
+
+
+In the example we 
+
+- add id to ToDo.java with getter and setter methods,
+- rewrite DataManager.java to use DbHandler.
+- create a menu in MainActivity for each ToDo row, 
+  which allows to modify and delete ToDos. 
+  Handle, if the ToDo list is modified.
+- extend ToDoAdapter.java 
+

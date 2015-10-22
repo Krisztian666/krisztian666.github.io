@@ -1,0 +1,35 @@
+<LinearLayout //{speak:"Add LinearLayout"}
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http:/ /schemas.android.com/apk/res/android">
+
+    <ScrollView ...>
+
+        <TableLayout...>
+...
+            <TableRow>
+                <TextView android:text="@string/date"/>
+                <DatePicker android:id="@+id/date"
+                    android:calendarViewShown="false"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="@string/date"/>
+                <TimePicker //{speak:"Add TimePicker"}
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"/>
+            </TableRow>
+...
+        </TableLayout>
+
+    </ScrollView>
+
+    <Button android:id="@+id/add_new_button" //{speak:"Add add_new_button"}
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addNewToDo" //{speak:"Call addNewToDo method"}
+        android:layout_gravity="center_horizontal"
+
+        android:text="@string/add_new_todo"/>
+
+</LinearLayout>

@@ -1,0 +1,1 @@
+Use the default settings.//{speak:"Use the default settings."}

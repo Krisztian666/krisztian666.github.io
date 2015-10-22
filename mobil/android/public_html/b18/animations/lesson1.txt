@@ -1,0 +1,36 @@
+Creating Own UI Widget
+
+App Widgets are miniature application views that can 
+be embedded in other applications (such as the Home screen) 
+and receive periodic updates.
+
+
+The Basics
+
+To create an App Widget, you need the following:
+
+- AppWidgetProviderInfo object
+Describes the metadata for an App Widget, such as the 
+App Widget's layout, update frequency, and the AppWidgetProvider 
+class. This should be defined in XML.
+
+- AppWidgetProvider class implementation
+Defines the basic methods that allow you to programmatically 
+interface with the App Widget, based on broadcast events. 
+Through it, you will receive broadcasts when the App Widget is 
+updated, enabled, disabled and deleted.
+
+- View layout
+Defines the initial layout for the App Widget, defined in XML.
+
+- Additionally, you can implement an App Widget configuration Activity. 
+This is an optional Activity that launches when the user adds 
+your App Widget and allows him or her to modify App Widget 
+settings at create-time.
+
+Android studio can generate you the necessary files.
+Select  
+File > New > Widget > App widget//{img:"as-new-widget1.png", speak:"File  New  Widget  App widget"}
+
+
+

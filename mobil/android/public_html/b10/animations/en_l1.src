@@ -1,0 +1,8 @@
+...
+        <ImageView //{speak:"Add ImageView"}
+            android:id="@+id/penImageView"
+            android:layout_width="20dp"
+            android:layout_height="60dp"
+            android:layout_alignRight="@id/addButton"
+            />
+...

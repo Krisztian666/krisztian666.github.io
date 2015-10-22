@@ -1,0 +1,15 @@
+Content provider
+
+Content providers manage access to a structured set of data. They 
+encapsulate the data, and provide mechanisms for defining data 
+security. Content providers are the standard interface that 
+connects data in one process with code running in another process. 
+
+ When you want to access data in a content provider, you use the 
+ContentResolver object in your application's Context to communicate 
+with the provider as a client. 
+
+In class ContactsProvider the method getContacts reads the 
+contacts data from phone book. The permission READ_CONTACTS
+is needed.
+

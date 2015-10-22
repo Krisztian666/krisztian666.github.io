@@ -1,0 +1,30 @@
+Use of Service Component
+
+A Service is an application component that can perform 
+long-running operations in the background and does not 
+provide a user interface. Another application component 
+can start a service and it will continue to run in the 
+background even if the user switches to another application.
+
+
+A service can essentially take two forms:
+
+- Started Service
+
+A service is "started" when an application component 
+(such as an activity) starts it by calling startService(). 
+Once started, a service can run in the background indefinitely, 
+even if the component that started it is destroyed. Usually, 
+a started service performs a single operation and does not 
+return a result to the caller. For example, it might download or 
+upload a file over the network. When the operation is done, 
+the service should stop itself.
+
+- Bound
+We will learn about it later.
+
+
+First of all, extend the data handling of the ToDo application,
+then add a Started Service. Android Studio can generate
+a servie for you.
+

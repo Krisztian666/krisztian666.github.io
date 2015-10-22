@@ -1,0 +1,14 @@
+A layout defines the visual structure for a user interface, 
+such as the UI for an activity or app widget. 
+You can declare a layout in two ways:
+- In XML or
+- Instantiate layout elements at runtime. 
+
+You will declare it now in XML. 
+Modify the generated layout.xml files.
+They are in your Android project's res/layout/ directory.
+
+The difference between layout types will be impressive, 
+if the other UI elements will be placed as well.
+
+Common Layouts:

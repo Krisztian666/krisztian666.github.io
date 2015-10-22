@@ -1,0 +1,8 @@
+- Table Layout
+
+TableLayout is a ViewGroup that displays 
+child View elements in rows and columns.
+
+Each TableRow defines a single row in the table.
+Each row has zero or more cells, each of which 
+is defined by any kind of other View.

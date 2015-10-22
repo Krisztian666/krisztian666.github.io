@@ -1,0 +1,27 @@
+Saving Key-Value Sets
+
+If you have a relatively small collection of key-values 
+that you'd like to save, you should use the SharedPreferences 
+APIs. A SharedPreferences object points to a file containing 
+key-value pairs and provides simple methods to read and write 
+them. Each SharedPreferences file is managed by the framework 
+and can be private or shared.
+
+You can create a new shared preference file or access an 
+existing one by calling one of two methods:
+
+getSharedPreferences() 
+Use this if you need multiple shared preference files identified 
+by name, which you specify with the first parameter. You can call 
+this from any Context in your app.
+
+getPreferences() 
+Use this from an Activity if you need to use 
+only one shared preference file for the activity. Because this 
+retrieves a default shared preference file that belongs to the 
+activity, you don't need to supply a name.
+
+
+In the example we create a ConfigureActivity and save the settings
+into SharedPreferences.
+Let the user set the time format.

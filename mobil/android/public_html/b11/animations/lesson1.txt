@@ -1,0 +1,76 @@
+The basics of supporting more screen sizes:
+
+- Use "wrap_content" and "match_parent"
+
+To ensure that your layout is flexible and adapts to 
+different screen sizes, you should use "wrap_content" 
+and "match_parent" for the width and height of some 
+view components instead of hard-coded sizes. 
+
+If you use "wrap_content", the width or height of the 
+view is set to the minimum size necessary to fit the 
+content within that view, 
+
+while "match_parent" ("fill_parent" before API level 8) 
+makes the component expand to match the size of its parent view.
+
+
+- Use RelativeLayout
+
+If you want a complex layout, use a RelativeLayout, which allows 
+you to specify your layout in terms of the special relationships 
+between components. E.g.: you can align one child view on the 
+left side and another view on the right side of the screen, or you 
+can align components below or above, left or right to other components. 
+
+
+- Use Qualifiers
+
+Your application should not only implement flexible layouts, 
+but should also provide several alternative layouts to target 
+different screen configurations. For different layouts use different 
+layout directories named with qualifiers, e.g:
+The default layout directory is inside your project:
+/res/layout
+containing e.g.: todorow.xml
+If you want different layout for landscape orientation make a new 
+directory with new layout files with same names:
+/res/layout-land
+    todorow.xml
+
+But you can use other, e.g. "large" size qualifier for large screens, 
+or use "sw600dp" for screens on which the smallest-width 600 dp is.
+
+
+- Alternative bitmap drawables
+
+You can create alternative bitmap drawables for different densities. 
+Follow the 3:4:6:8:12:16 scaling ratio between the six generalized 
+densities. E.g., if you have a bitmap drawable that's 48x48 pixels 
+for medium-density screens, all the different sizes should be:
+
+    36x36 (0.75x) for low-density
+    48x48 (1.0x baseline) for medium-density
+    72x72 (1.5x) for high-density
+    96x96 (2.0x) for extra-high-density
+    180x180 (3.0x) for extra-extra-high-density
+    192x192 (4.0x) for extra-extra-extra-high-density
+
+Use the following directory structure:
+
+res/drawable-ldpi/todoicon.png    / bitmap for low-density
+res/drawable-mdpi/todoicon.png    / bitmap for medium-density
+res/drawable-hdpi/todoicon.png    / bitmap for high-density
+res/drawable-xhdpi/todoicon.png   / bitmap for extra-high-density
+res/drawable-xxhdpi/todoicon.png  / bitmap for extra-extra-high-density
+
+
+- Use Density-independent Pixels
+
+A dp is a density-independent pixel that corresponds 
+to the physical size of a pixel at 160 dpi.
+
+An sp is the same base unit, but is scaled by the user's 
+preferred text size (it’s a scale-independent pixel), so you 
+should use this measurement unit when defining text size 
+(but never for layout sizes).

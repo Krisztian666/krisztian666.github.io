@@ -1,0 +1,49 @@
+<android.support.v4.widget.DrawerLayout 
+    ...>
+
+    <!-- MainActivity UI -->
+    <RelativeLayout 
+        ...>
+
+        <TextView
+            android:id="@+id/aboutTewtView"
+            android:text="About ToDo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp" //{speak:"Add elevation"}
+            android:background="@drawable/outline_rectangle"/> //{speak:"Set background"}
+
+        <ImageButton
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add new ToDo ..."
+            android:layout_below="@+id/aboutTewtView"
+            android:src="@drawable/todoicon"
+            android:elevation="10dp"/>//{speak:"Add elevation"}
+        <ImageView
+            android:id="@+id/penImageView"
+            android:layout_width="20dp"
+            android:layout_height="60dp"
+            android:layout_alignRight="@id/addButton"
+            android:elevation="20dp"//{speak:"Add elevation"}
+            />
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addButton"
+            android:elevation="10dp">//{speak:"Add elevation"}
+        </ListView>
+
+    </RelativeLayout>
+
+    <!-- Side navigation drawer UI -->
+    <ListView
+        android:id="@+id/navBarList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#ffeeeeee"/>
+
+</android.support.v4.widget.DrawerLayout>
