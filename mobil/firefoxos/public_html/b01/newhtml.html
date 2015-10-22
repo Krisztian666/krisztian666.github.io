@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="http://localhost/krisztian666.github.io/mobil/firefoxos/public_html/util/player/player.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://krisztian666.github.io/mobil/firefoxos/public_html/util/player/player.css"/>
+<script>
+    var confpath = "http://krisztian666.github.io/mobil/firefoxos/public_html/b01/animations/en.html";
+    var url0="http://krisztian666.github.io/mobil/firefoxos/public_html/b01/hu/humemoc.html";
+    var container0="#firefoxosplay";
+</script>
+<div id="firefoxosplay"><img src="http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/press-de/files/2014/11/FirefoxOS-logo_610x385.png"></div>
+<script>
+function reqListener0 () {
+    document.querySelector(container0).innerHTML=this.responseText;
+}
+ 
+  var oReq0 = new XMLHttpRequest();
+  oReq0.addEventListener("load", reqListener0);
+  oReq0.open("GET", url0);
+
+  function load(){oReq0.send();}
+  setTimeout(load,1500);
+</script>
