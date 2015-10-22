@@ -6,9 +6,9 @@ code{
                 border-bottom: 1px solid #0000aa;
                 margin: 10px 0;
 background: none;
-             }
+}
 #view-top, #wrapper, #wrapper-header,.sequence-nav-button{z-index:100 !important; }             
-.ui-button-icon-primary, .ui-icon, .ui-icon-closethick{margin:none !important;}
+.ui-button-icon-primary, .ui-icon, .ui-icon-closethick{margin:-8px !important;}
 #playercontent{z-index:1000;}
              pre{
                  font-size: x-large;
@@ -19,6 +19,6 @@ background: none;
              .modifing{
                  background-color: red;
              }
-#playercontent {
+#playercontentheader {
 text-align: center;
 }
