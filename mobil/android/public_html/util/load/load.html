@@ -1,0 +1,13 @@
+<script>
+var url="http://krisztian666.github.io/mobil/firefoxos/public_html/util/player/player.html?path=http://krisztian666.github.io/mobil/firefoxos/public_html/b01/animations/en.conf";
+var container="#firefoxoa_b01";
+function reqListener () {
+    document.querySelector(container).innerHTML=this.responseText;
+}
+
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", url);
+oReq.send();
+</script>
+<div id="firefoxoa_b01" ></div>
