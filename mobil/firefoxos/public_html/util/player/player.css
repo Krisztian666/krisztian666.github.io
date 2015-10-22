@@ -8,6 +8,7 @@ code{
 background: none;
              }
 #view-top, wrapper, wrapper-header{z-index:100 !important; }             
+.ui-button-icon-primary, .ui-icon, .ui-icon-closethick{margin:none !important;}
 #playercontent{z-index:1000;}
              pre{
                  font-size: x-large;
