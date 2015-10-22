@@ -92,7 +92,7 @@ function newText(pCont, pIdx) {
 
 
 function speak(pTxt){
-    $("#playercontent h3").html(pTxt);
+    $("h3").html(pTxt);
 //    $("#screen audio").attr("src","http://5.249.155.46:8080/SoundServer-1.0/sound?text="+pTxt+".");
 //    document.querySelector("#screen audio").play();
 }
@@ -124,38 +124,6 @@ function startingPlayer(){
             });
             
 }
-
-function startingPlayer(path){
-            $.ajax({
-                url: path,
-                success: function(result){
-                    eval("edContent="+result);
-                    $("#playercontent").attr("title",edContent.title);
-                    $("#playercontentheader span").html(edContent.desc);
-                    for(x in edContent.files){
-                        $("#sources ul").append("<li><a href=\"#"+edContent.files[x].id+"\">"+edContent.files[x].title+"</a></li>");
-                        $("#sources").append("<div id="+edContent.files[x].id+"  number=\""+x+"\"><pre></pre></div>");
-                    }
-                    $("#sources").tabs();
-                    $("#screen").tabs();
-    $("#playercontent").dialog({
-        resizable: true,
-        position: [100, 100],
-        width : screen.width-100,
-        height : screen.height -100,
-        modal: true
-    });
-    playContent();
-                }
-            });
-}
-    
-
-
-    function loadAnimation() {
-        startingPlayer(confpath);
-    }
-    
         
             function writeCode(){
                 $("#sources").tabs("option","active",$("#"+dataSource["container"]).attr("number"));
