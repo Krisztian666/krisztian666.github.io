@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Todo 1 from JSON",
+    "priority": "LOW",
+    "date": 1446338090170,
+    "allday": true,
+    "description": "Description 1",
+    "url": "http://android.com",
+    "contact": {
+      "name": "John Smith",
+      "phone": "0036301234567",
+      "email": ""
+    }
+  },
+  {
+    "name": "Todo 2 from JSON",
+    "priority": "MED",
+    "date": 1446338090170,
+    "allday": false,
+    "description": "Description 2",
+    "url": "http://android.hu",
+    "contact": {
+      "name": "Jason",
+      "phone": "0036301234567",
+      "email": ""
+    }
+  }
+]

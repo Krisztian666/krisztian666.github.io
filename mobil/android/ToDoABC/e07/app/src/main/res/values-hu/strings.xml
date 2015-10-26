@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Teendők</string>
+
+    <string name="hello_world">Hello világ!</string>
+    <string name="action_settings">Beállítások</string>
+    <string name="title_activity_add_new">AddNewActivity</string>
+    <string name="title_activity_details">DetailsActivity</string>
+
+    <!-- About Dialog -->
+    <string name="about">Névjegy</string>
+    <string name="about_txt">Ez egy példa alkalmazás teendők kezelésére.</string>
+    <string name="about_called">A névjegyet megmutattuk...</string>
+
+    <!-- Activity Main -->
+    <string name="about_todo">Teendők névjegye</string>
+    <string name="add_new_todo">Új teendő felvitele</string>
+
+    <!-- Activity AddNew -->
+    <string name="todo">Teendő</string>
+    <string name="todo_name">Teendő megnevezése</string>
+    <string name="priority">Fontosság</string>
+    <string name="low">kicsi</string>
+    <string name="medium">közepes</string>
+    <string name="high">nagy</string>
+    <string name="date">Dátum</string>
+    <string name="all_day">Egész nap</string>
+    <string name="description">Leírás</string>
+
+    <!-- Activity Details -->
+    <string name="details">Részletek</string>
+    <string name="detailed_todo">Teendő részletei</string>
+
+    <string name="close">Bezárás</string>
+    <string name="time">Idő</string>
+    <string name="appwidget_text">Példa</string>
+    <string name="last_refresh_time">Utoljára frissítve</string>
+    <string name="url">URL</string>
+    <string name="add_new_notification_title">Új teendő felvitele szervízhívás</string>
+    <string name="add_contact">Társ hozzáadása</string>
+    <string name="select">Kiválasztás</string>
+    <string name="name">Név</string>
+    <string name="phone">Tel.</string>
+    <string name="delete">Törlés</string>
+    <string name="back">Vissza</string>
+    <string name="save">Mentés</string>
+    <string name="simport">Import</string>
+    <string name="import_true">Az importálás sikerült.</string>
+    <string name="import_false">Az importálás nem sikerült.</string>
+    <string name="no_connection">Nincs kapcsolat.</string>
+    <string name="fillin">Töltsd ki a mezőt!</string>
+    <string name="import_example_xml">Példa import Xml-ből</string>
+    <string name="import_example_json">Példa import JSON-ből</string>
+
+</resources>

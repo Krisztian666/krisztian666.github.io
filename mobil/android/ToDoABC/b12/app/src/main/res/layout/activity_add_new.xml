@@ -1,0 +1,66 @@
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:stretchColumns="0"
+    tools:context="com.example.todo.AddNewActivity">
+
+
+    <TextView android:text="Add new ToDo" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TableRow>
+        <TextView android:text="Event"/>
+        <EditText android:id="@+id/eventNameEditText"
+            android:text="Event Name"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Priority"/>
+        <RadioGroup android:id="@+id/priorityRadioGroup"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/pLowRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="low"/>
+            <RadioButton
+                android:id="@+id/pMedRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="medium"/>
+            <RadioButton
+                android:id="@+id/pHighRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="high"/>
+        </RadioGroup>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Date"/>
+        <DatePicker android:id="@+id/date"></DatePicker>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="All Day"/>
+        <CheckBox android:id="@+id/allDayCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Description"/>
+        <EditText android:id="@+id/descriptionEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+
+
+</TableLayout>
+
+</ScrollView>

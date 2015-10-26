@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<todos>
+    <todo>
+        <name priority="LOW" date="1446337090170" allday="true">Todo 1 from xml</name>
+        <description>Todo 1 description</description>
+        <url>http://android.com</url>
+        <contact>
+            <name>John Smith</name>
+            <phone>+36301234567</phone>
+            <email></email>
+        </contact>
+    </todo>
+
+    <todo>
+        <name priority="MED" date="1446337100170" allday="false">Todo 2 from xml</name>
+        <description>Todo 2 description</description>
+        <url>http://android.hu</url>
+        <contact>
+            <name>Jason</name>
+            <phone>+36307654321</phone>
+            <email></email>
+        </contact>
+    </todo>
+</todos>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">ToDo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_new">AddNewActivity</string>
+    <string name="title_activity_details">DetailsActivity</string>
+
+    <!-- About Dialog -->
+    <string name="about">About</string>
+    <string name="about_txt">This is a demo ToDo application.</string>
+    <string name="about_called">About is called...</string>
+
+    <!-- Activity Main -->
+    <string name="about_todo">About ToDo</string>
+    <string name="add_new_todo">Add new ToDo</string>
+
+    <!-- Activity AddNew -->
+    <string name="todo">ToDo</string>
+    <string name="todo_name">ToDo Name</string>
+    <string name="priority">Priority</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
+    <string name="date">Date</string>
+    <string name="all_day">All Day</string>
+    <string name="description">Description</string>
+
+    <!-- Activity Details -->
+    <string name="details">Details</string>
+    <string name="detailed_todo">Detailed ToDo</string>
+
+    <string name="close">Close</string>
+    <string name="time">Time</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="last_refresh_time">Last refresh time</string>
+    <string name="url">URL</string>
+    <string name="add_new_notification_title">Call add new ToDo Service</string>
+    <string name="add_new_notification_message">addnew msg</string>
+    <string name="title_activity_configure">ConfigureActivity</string>
+
+</resources>
