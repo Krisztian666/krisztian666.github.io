@@ -319,7 +319,7 @@ public class MainActivity extends ListActivity {
         }
         if (menuItemIndex ==6) {
             Intent myIntent = new Intent();
-            myIntent.setClassName("com.example.todo", "com.example.todo.ToDoArActivity");
+            myIntent.setClassName("com.example.todo", "com.example.todo.ARCompassActivity");
             myIntent.putExtra("id", ((ToDo) getListAdapter().getItem(info.position)).getId());
             startActivity(myIntent);
         }
